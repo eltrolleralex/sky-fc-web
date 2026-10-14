@@ -308,6 +308,17 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
   .footer-socials{justify-content:flex-start}
 }
 
+/* Junta directiva de SKY FC */
+.board-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.board-card{padding:26px 22px;position:relative;overflow:hidden;min-height:210px}
+.board-card:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--gold)}
+.board-number{display:block;font-weight:950;font-size:2.25rem;line-height:1;color:rgba(245,187,53,.28);margin-bottom:24px}
+.board-card h3{font-size:1.27rem;line-height:1.3;margin:10px 0 0}
+.board-role{color:var(--gold);font-weight:900;font-size:.71rem;letter-spacing:.15em;text-transform:uppercase}
+.board-note{margin-top:20px;padding:20px 24px;color:#c0d1e4;line-height:1.7}
+.board-note strong{color:var(--white)}
+@media(max-width:900px){.board-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.board-grid{grid-template-columns:1fr}.board-card{min-height:160px}.board-number{margin-bottom:18px}}
 </style>
 </head>
 <body>
@@ -324,6 +335,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
       <a href="#lesiones">Lesiones</a>
       <a href="#clasificacion">Clasificación</a>
       <a href="#club">Club</a>
+      <a href="#directiva">Directiva</a>
       <a href="#redes">Redes</a>
     </nav>
     <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
@@ -409,6 +421,19 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
       <p>Responsables deportivos y organizativos del SKY FC para la temporada 2026/27.</p>
     </div>
     <div class="leadership-grid" id="leadership"></div>
+  </div>
+</section>
+
+<section id="directiva">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Organización del club · 2026/27</div><h2>Junta Directiva</h2></div>
+      <p>Las personas que asumen las responsabilidades institucionales y de gestión del SKY FC.</p>
+    </div>
+    <div class="board-grid" id="board"></div>
+    <div class="panel board-note">
+      <strong>14 de octubre de 2026.</strong> El SKY FC ha cumplimentado y entregado la documentación de su junta directiva ante la Real Federación de Fútbol de Castilla-La Mancha.
+    </div>
   </div>
 </section>
 
@@ -679,6 +704,13 @@ window.SKY_DATA = {
     }
   ],
 
+  board: [
+    { role: "Presidente", name: "Alejandro Ortega" },
+    { role: "Vicepresidente", name: "Asier González" },
+    { role: "Secretario", name: "Sergio Requena" },
+    { role: "Tesorero", name: "Pedro Miguel Ruiz" }
+  ],
+
   injuries: [
     {
       player: "Sergio Requena Megias",
@@ -692,6 +724,13 @@ window.SKY_DATA = {
   standings: [],
 
   news: [
+    {
+      date: "2026-10-14",
+      title: "El SKY FC presenta la documentación de su junta directiva ante la Federación",
+      mediaType: "image",
+      mediaRef: "crest",
+      text: "Este 14 de octubre, representantes del SKY FC han acudido a la Real Federación de Fútbol de Castilla-La Mancha para cumplimentar y entregar la documentación correspondiente a la junta directiva del club. La directiva está formada por Alejandro Ortega (presidente), Asier González (vicepresidente), Sergio Requena (secretario) y Pedro Miguel Ruiz (tesorero)."
+    },
     {
       date: "2026-10-06",
       title: "Primer entrenamiento del SKY FC",
@@ -826,6 +865,17 @@ function renderLeadership(){
     </article>`).join("");
 }
 
+function renderBoard(){
+  const el=$("#board");
+  if(!el) return;
+  el.innerHTML=(D.board||[]).map((m,i)=>`
+    <article class="panel board-card">
+      <span class="board-number" aria-hidden="true">${String(i+1).padStart(2,"0")}</span>
+      <div class="board-role">${esc(m.role)}</div>
+      <h3>${esc(m.name)}</h3>
+    </article>`).join("");
+}
+
 function renderInjuries(){
   $("#injuries").innerHTML = D.injuries.length ? D.injuries.map(i=>`
     <article class="panel injury-card">
@@ -881,7 +931,7 @@ $("#competitionQuick").innerHTML=`${esc(D.club.competition)}<small>Temporada ${e
 $("#socialQuick").innerHTML=`Instagram · TikTok · YouTube<small>IG/TikTok: @skyfc.7 · YouTube: @SKYFC-7</small>`;
 $("#sponsorName").textContent=D.club.sponsor;
 
-renderQuick(); renderMatches(); renderStats(); renderSquad(); renderLeadership(); renderInjuries(); renderStandings(); renderNews();
+renderQuick(); renderMatches(); renderStats(); renderSquad(); renderLeadership(); renderBoard(); renderInjuries(); renderStandings(); renderNews();
 
 </script>
 </body>
