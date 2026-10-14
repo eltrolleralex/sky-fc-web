@@ -1,0 +1,30 @@
+name: Restaurar web completa SKY FC
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/restore-skyfc.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recuperar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Obtener código actual
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recuperar contenido sin perder directiva
+        run: python tools/restore_20261014.py
+      - name: Guardar versión recuperada en GitHub
+        run: |
+          git config user.name "SKY FC website bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html suscripciones.js confirmada.html privacidad.html OneSignalSDKWorker.js escudo-oficial-skyfc.webp favicon.ico favicon.png googlee2f68416eda4e20c.html robots.txt sitemap.xml
+          git diff --cached --quiet || (git commit -m "Restaurar web completa, correo, WhatsApp y directiva" && git push)
