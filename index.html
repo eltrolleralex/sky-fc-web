@@ -360,6 +360,22 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
 .board-note strong{color:var(--white)}
 @media(max-width:900px){.board-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.board-grid{grid-template-columns:1fr}.board-card{min-height:160px}.board-number{margin-bottom:18px}}
+
+/* Seguimiento oficial Prodepor · Fútbol 7 Sénior 2026/27 */
+.league-official-banner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 24px;border:1px solid rgba(245,187,53,.34);border-radius:18px;background:linear-gradient(115deg,rgba(245,187,53,.13),rgba(7,28,57,.9));margin:18px 0}
+.league-official-banner strong{display:block;font-size:1.12rem;color:var(--white)}
+.league-official-banner p{margin:7px 0 0;color:#c4d1e3;line-height:1.55;font-size:.94rem;max-width:720px}
+.league-official-banner .btn{white-space:normal;text-align:center;flex-shrink:0}
+.official-league-frame{overflow:hidden;margin-top:17px}
+.official-league-frame-head{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:17px 21px;border-bottom:1px solid rgba(255,255,255,.11)}
+.official-league-frame-head strong{color:#fff}
+.official-league-frame-head span{color:#b6c7dd;font-size:.83rem}
+.official-league-frame iframe{display:block;width:100%;height:700px;border:0;background:#fff}
+.league-match-info{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:19px 23px;margin-top:18px}
+.league-match-info p{color:#becfe1;margin:6px 0 0;line-height:1.5}
+.league-match-info a{font-weight:850;color:var(--gold);text-decoration:underline;text-underline-offset:4px}
+@media(max-width:640px){.official-league-frame iframe{height:640px}.league-official-banner{padding:18px}.league-official-banner .btn{width:100%}}
+
 </style>
   <script type="application/ld+json">
 {
@@ -520,6 +536,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
       <div class="panel"><div style="padding:20px 20px 4px"><div class="kicker">Finalizados</div><h3>Resultados</h3></div><div id="results" class="match-list"></div></div>
     </div>
     <div class="stats" id="stats"></div>
+    <div class="panel league-match-info">
+      <div><strong>Calendario oficial pendiente de publicación</strong><p>Cuando Prodepor confirme los encuentros de SKY FC, aparecerán aquí las jornadas, rivales, horarios y campos.</p></div>
+      <a href="https://jdmprodepor.com/futbol-7-senior-2026-2027/resumen" target="_blank" rel="noopener noreferrer">Consultar competición en Prodepor ↗</a>
+    </div>
   </div>
 </section>
 
@@ -564,10 +584,24 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
 <section id="clasificacion">
   <div class="container">
     <div class="section-head">
-      <div><div class="kicker">Liga</div><h2>Clasificación</h2></div>
-      <p>La tabla puede actualizarse después de cada jornada para que la afición vea la evolución del equipo.</p>
+      <div><div class="kicker">Liga Fútbol 7 Sénior · Albacete · 2026/27</div><h2>Clasificación oficial</h2></div>
+      <p>Consulta los equipos y sus posiciones en Prodepor, la fuente oficial de los Juegos Deportivos Municipales.</p>
     </div>
-    <div class="panel table-wrap">
+    <div class="league-official-banner">
+      <div>
+        <strong>La clasificación de equipos ya está publicada</strong>
+        <p>Accede a los grupos y la tabla de la temporada 2026/27. Los datos dependen directamente de Prodepor y pueden cambiar durante la competición.</p>
+      </div>
+      <a class="btn primary" href="https://jdmprodepor.com/futbol-7-senior-2026-2027/resumen" target="_blank" rel="noopener noreferrer">Ver clasificación en Prodepor ↗</a>
+    </div>
+    <div class="panel official-league-frame">
+      <div class="official-league-frame-head">
+        <strong>Vista de la competición en Prodepor</strong>
+        <span>Si el contenido no se visualiza, utiliza el botón superior para acceder a la tabla.</span>
+      </div>
+      <iframe src="https://jdmprodepor.com/futbol-7-senior-2026-2027/resumen" title="Clasificación de la Liga de Fútbol 7 Sénior de Albacete 2026/27 en Prodepor" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <div class="panel table-wrap" id="standingsNativePanel" hidden>
       <table>
         <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>PTS</th></tr></thead>
         <tbody id="standingsBody"></tbody>
@@ -949,6 +983,7 @@ function renderInjuries(){
 }
 
 function renderStandings(){
+  $("#standingsNativePanel").hidden = !D.standings.length;
   $("#standingsBody").innerHTML = D.standings.length ? D.standings.map(t=>`
     <tr class="${t.team.toUpperCase().includes("SKY")?"sky":""}">
       <td>${t.pos}</td><td><strong>${esc(t.team)}</strong></td><td>${t.pj}</td><td>${t.pg}</td><td>${t.pe}</td><td>${t.pp}</td><td>${t.gf}</td><td>${t.gc}</td><td><strong>${t.pts}</strong></td>
