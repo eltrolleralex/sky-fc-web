@@ -537,7 +537,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
     </div>
     <div class="stats" id="stats"></div>
     <div class="panel league-match-info">
-      <div><strong>Ya están publicados los primeros partidos oficiales</strong><p>Prodepor ha comenzado a publicar los encuentros de liga de M+Qpizza SKY FC. Consulta la ficha oficial del equipo para ver los rivales, fechas, horarios y campos actualizados. El calendario de esta web seguirá mostrando por separado los encuentros que ya tengamos incorporados.</p></div>
+      <div><strong>Publicadas las 9 jornadas del Grupo A</strong><p>Ya puedes consultar en esta web los rivales y el orden de las nueve jornadas oficiales de M+Qpizza SKY FC. Prodepor todavía no ha asignado fechas, horarios ni campos. Actualizaremos esos detalles en cuanto se publiquen. El amistoso del 21 de octubre figura por separado.</p></div>
       <a href="https://jdmprodepor.com/futbol-7-senior-2026-2027/equipo/4514/mqpizza-sky-fc" target="_blank" rel="noopener noreferrer">Ver partidos oficiales de M+Qpizza SKY FC ↗</a>
     </div>
   </div>
@@ -728,10 +728,101 @@ window.SKY_DATA = {
     {
       date: "2026-10-21",
       round: "Amistoso",
+      competition: "amistoso",
       time: "22:00–23:00 h",
       home: "M+Qpizza SKY FC",
       away: "Muchismo del Sur FC",
       venue: "Campos de Fútbol Municipales Alba Redondo · Campo 1A · Albacete"
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 1",
+      competition: "liga",
+      jornada: 1,
+      time: null,
+      home: "Wolfsburgo FC",
+      away: "M+Qpizza SKY FC",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 2",
+      competition: "liga",
+      jornada: 2,
+      time: null,
+      home: "M+Qpizza SKY FC",
+      away: "Albacetium",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 3",
+      competition: "liga",
+      jornada: 3,
+      time: null,
+      home: "Manchegan Warrios",
+      away: "M+Qpizza SKY FC",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 4",
+      competition: "liga",
+      jornada: 4,
+      time: null,
+      home: "M+Qpizza SKY FC",
+      away: "Muchismo del SUR",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 5",
+      competition: "liga",
+      jornada: 5,
+      time: null,
+      home: "BixsGang FC",
+      away: "M+Qpizza SKY FC",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 6",
+      competition: "liga",
+      jornada: 6,
+      time: null,
+      home: "M+Qpizza SKY FC",
+      away: "OLD Legends",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 7",
+      competition: "liga",
+      jornada: 7,
+      time: null,
+      home: "M+Qpizza SKY FC",
+      away: "CLUB Deportivo Albacete",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 8",
+      competition: "liga",
+      jornada: 8,
+      time: null,
+      home: "Aitor Barbero FC",
+      away: "M+Qpizza SKY FC",
+      venue: null
+    },
+    {
+      date: null,
+      round: "Liga · Grupo A · Jornada 9",
+      competition: "liga",
+      jornada: 9,
+      time: null,
+      home: "M+Qpizza SKY FC",
+      away: "7 Estrellas",
+      venue: null
     }
   ],
 
@@ -843,7 +934,7 @@ window.SKY_DATA = {
       title: "Prodepor publica los primeros encuentros de liga de M+Qpizza SKY FC",
       mediaType: "image",
       mediaRef: "crest",
-      text: "Ya se pueden consultar los primeros partidos oficiales de M+Qpizza SKY FC para la temporada 2026/27 en la ficha del equipo dentro de Prodepor. Las fechas, los horarios, los rivales y los campos deben consultarse en Prodepor, fuente oficial de la competición."
+      text: "Ya conocemos el calendario de rivales para las nueve jornadas de la liga de fútbol 7, Grupo A. Debutaremos frente a Wolfsburgo FC y cerraremos esta primera fase ante 7 Estrellas. Por ahora Prodepor no ha publicado fechas, horarios ni campos: todos figuran como pendientes. Los cruces completos ya se pueden consultar en la sección Partidos de nuestra web."
     },
     {
       date: "2026-10-19",
@@ -924,7 +1015,10 @@ function dateFmt(d){
 }
 
 function nextFixture(){
-  return [...D.fixtures].sort((a,b)=>new Date(a.date)-new Date(b.date))[0];
+  const now = new Date();
+  const dated = D.fixtures.filter(m => m.date && new Date(m.date + "T23:59:59") >= now)
+    .sort((a,b) => a.date.localeCompare(b.date));
+  return dated[0] || D.fixtures.find(m => !m.date) || null;
 }
 function lastResult(){
   return [...D.results].sort((a,b)=>new Date(b.date)-new Date(a.date))[0];
@@ -932,17 +1026,18 @@ function lastResult(){
 
 function renderQuick(){
   const nf = nextFixture(), lr = lastResult();
-  $("#nextQuick").innerHTML = nf ? `${esc(nf.home)} <span>vs</span> ${esc(nf.away)}<small>${dateFmt(nf.date)} · ${esc(nf.time||"")}</small>` : `Por confirmar<small>Calendario pendiente</small>`;
+  $("#nextQuick").innerHTML = nf ? `${esc(nf.home)} <span>vs</span> ${esc(nf.away)}<small>${nf.date ? dateFmt(nf.date) : "Fecha por confirmar"} · ${esc(nf.time || "Hora por confirmar")}</small>` : `Por confirmar<small>Calendario pendiente</small>`;
   $("#lastQuick").innerHTML = lr ? `${esc(lr.home)} ${lr.homeScore}-${lr.awayScore} ${esc(lr.away)}<small>${dateFmt(lr.date)}</small>` : `Sin resultados<small>Temporada 2026/27</small>`;
 }
 
 function renderMatches(){
   const f = $("#fixtures"), r = $("#results");
-  f.innerHTML = D.fixtures.length ? D.fixtures.map(m=>`
+  const upcoming = D.fixtures.filter(m => !m.date || new Date(m.date + "T23:59:59") >= new Date());
+  f.innerHTML = upcoming.length ? upcoming.map(m=>`
     <article class="match-card">
-      <div class="match-date">${dateFmt(m.date)}<small>${esc(m.round||"")} · ${esc(m.time||"")}</small></div>
-      <div class="teams">${esc(m.home)} <span>vs</span> ${esc(m.away)}<small style="display:block;color:var(--muted);font-weight:500">${esc(m.venue||"")}</small></div>
-      <div class="pill">PRÓXIMO</div>
+      <div class="match-date">${m.date ? dateFmt(m.date) : "Sin fecha"}<small>${esc(m.round||"")} · ${esc(m.time || "Hora por asignar")}</small></div>
+      <div class="teams">${esc(m.home)} <span>vs</span> ${esc(m.away)}<small style="display:block;color:var(--muted);font-weight:500">${esc(m.venue || "Campo sin asignar")}</small></div>
+      <div class="pill">${m.competition === "liga" ? "LIGA" : "AMISTOSO"}</div>
     </article>`).join("") : `<div class="empty">Todavía no hay próximos partidos publicados.</div>`;
 
   r.innerHTML = D.results.length ? D.results.map(m=>`
