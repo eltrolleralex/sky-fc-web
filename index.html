@@ -602,6 +602,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
       <div class="panel"><div style="padding:20px 20px 4px"><div class="kicker">Próximos</div><h3>Calendario</h3></div><div id="fixtures" class="match-list"></div></div>
       <div class="panel"><div style="padding:20px 20px 4px"><div class="kicker">Finalizados</div><h3>Resultados</h3></div><div id="results" class="match-list"></div></div>
     </div>
+    <div class="kicker" style="margin:22px 0 12px">Estadísticas de liga · No incluye amistosos</div>
     <div class="stats" id="stats"></div>
     <div class="panel league-match-info">
       <div><strong>Publicadas las 9 jornadas del Grupo A</strong><p>Ya están publicadas las fechas de las nueve jornadas oficiales de M+Qpizza SKY FC, desde el 29 de octubre de 2026 hasta el 18 de enero de 2027. El debut ante Wolfosburgo FC será el jueves 29 de octubre a las 22:30 h en el Campo de Fútbol José Copete n.º 1 (Albacete), ya confirmado por Prodepor. Las horas y los campos de las otras ocho jornadas continúan pendientes de asignación. Consulta la <a href="https://jdmprodepor.com/futbol-7-senior-2026-2027/partido/28225" target="_blank" rel="noopener noreferrer">ficha oficial del debut</a>. El amistoso del 21 de octubre figura por separado.</p></div>
@@ -1131,8 +1132,10 @@ function renderMatches(){
 }
 
 function teamStats(){
-  let s={pj:D.results.length,pg:0,pe:0,pp:0,gf:0,gc:0};
-  for(const m of D.results){
+  // Los amistosos se muestran en Resultados, pero no cuentan para las estadísticas de liga.
+  const leagueResults = D.results.filter(m => m.competition === "liga");
+  let s={pj:leagueResults.length,pg:0,pe:0,pp:0,gf:0,gc:0};
+  for(const m of leagueResults){
     const home = m.home.toUpperCase().includes("SKY");
     const gf = home ? m.homeScore : m.awayScore;
     const gc = home ? m.awayScore : m.homeScore;
