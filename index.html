@@ -958,7 +958,24 @@ window.SKY_DATA = {
     { role: "Tesorero", name: "Pedro Miguel Ruiz Richart", secondaryRole: "Entrenador" }
   ],
 
-  injuries: [],
+  injuries: [
+    {
+      player: "Javi «Calvo» · Javier Sánchez Martínez",
+      type: "Esguince",
+      since: "2026-10-21",
+      status: "Lesionado · pendiente de evolución",
+      context: "Partido amistoso del miércoles 21 de octubre",
+      estimatedReturn: "Por confirmar"
+    },
+    {
+      player: "Alejandro Díez «Rosin» · Alejandro Díez Rosingana",
+      type: "Esguince",
+      since: "2026-10-19",
+      status: "Lesionado · pendiente de evolución",
+      context: "Entrenamiento del lunes 19 de octubre",
+      estimatedReturn: "Por confirmar"
+    }
+  ],
 
   standings: [],
 
@@ -1144,7 +1161,8 @@ function renderInjuries(){
     <article class="panel injury-card">
       <div class="kicker">${esc(i.status||"Baja")}</div>
       <h3>${esc(i.player)}</h3>
-      <p>${esc(i.type)}</p>
+      <p><strong>${esc(i.type)}</strong></p>
+      ${i.context ? `<p>${esc(i.context)}</p>` : ""}
       <p>Desde: <strong>${esc(i.sinceText || dateFmt(i.since) || "Pendiente")}</strong></p>
       <p>Vuelta estimada: <strong>${esc(i.estimatedReturn||"Pendiente")}</strong></p>
     </article>`).join("") : `<div class="empty" style="grid-column:1/-1">No hay partes de baja publicados.</div>`;
