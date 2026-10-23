@@ -116,6 +116,8 @@ h2{margin:7px 0 0;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.035em}
 .stat{padding:20px 14px;text-align:center}
 .stat strong{font-size:1.6rem;display:block}.stat span{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em}
 .squad-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.reserved-player-note{margin-top:16px;padding:15px 18px;color:var(--muted);font-size:.9rem}
+.reserved-player-note strong{color:var(--gold)}
 .filter{background:rgba(255,255,255,.05);border:1px solid var(--line);color:white;padding:9px 13px;border-radius:999px;cursor:pointer}
 .filter.active{background:var(--gold);border-color:var(--gold);color:#07101f}
 .squad-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -578,8 +580,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
     <div class="squad-tools">
       <span class="pill"><strong id="squadCount">15</strong>&nbsp; jugadores inscritos</span>
       <span class="pill">Temporada 2026/27</span>
+      <span class="pill">1 dorsal reservado sin ficha</span>
     </div>
     <div class="squad-grid" id="squad"></div>
+    <div class="panel reserved-player-note"><strong>Dorsal 4 reservado: Sergio Requena Megías.</strong> Pendiente de tramitar su ficha. No cuenta entre los jugadores inscritos ni en las estadísticas oficiales.</div>
   </div>
 </section>
 
@@ -973,6 +977,14 @@ window.SKY_DATA = {
       since: "2026-10-19",
       status: "Lesionado · pendiente de evolución",
       context: "Entrenamiento del lunes 19 de octubre",
+      estimatedReturn: "Por confirmar"
+    },
+    {
+      player: "Sergio Requena Megías · Dorsal 4 reservado",
+      type: "Lesión de menisco",
+      sinceText: "Fecha no especificada",
+      status: "Lesionado · pendiente de tramitar ficha",
+      context: "Delegado del club · dorsal reservado para su futura incorporación como jugador",
       estimatedReturn: "Por confirmar"
     }
   ],
