@@ -163,6 +163,8 @@ tr.sky{background:rgba(245,187,53,.08)}
 .news-card.featured h3{font-size:clamp(1.7rem,3vw,2.45rem);max-width:760px}
 .news-card p{color:var(--muted);line-height:1.6;margin:0}
 .news-card.featured p{font-size:1.02rem;max-width:780px}
+.news-sponsor-cta{display:inline-block;margin-top:16px;padding:11px 16px;border-radius:10px;background:#d71323;color:#fff;font-weight:900;text-decoration:none;border:1px solid rgba(255,255,255,.24);transition:background .2s}
+.news-sponsor-cta:hover,.news-sponsor-cta:focus-visible{background:#f02436;color:#fff}
 .news-media-type{position:absolute;right:14px;bottom:12px;z-index:2;padding:6px 9px;border-radius:999px;background:rgba(2,13,30,.72);border:1px solid rgba(255,255,255,.15);font-size:.68rem;font-weight:850;color:#fff}
 
 /* Banner fotográfico oficial facilitado por el club, sin modificaciones */
@@ -565,7 +567,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
     <div class="kicker" style="margin:22px 0 12px">Estadísticas de liga · No incluye amistosos</div>
     <div class="stats" id="stats"></div>
     <div class="panel league-match-info">
-      <div><strong>Publicadas las 9 jornadas del Grupo A</strong><p>Ya están publicadas las fechas de las nueve jornadas oficiales de M+Qpizza SKY FC, desde el 29 de octubre de 2026 hasta el 18 de enero de 2027. El debut, disputado el jueves 29 de octubre en el Campo de Fútbol José Copete n.º 1, terminó con victoria del Wolfosburgo FC por 7-2. El próximo encuentro está previsto para el lunes 9 de noviembre ante Albacetium, con hora y campo pendientes de confirmación. Los horarios y campos del resto de jornadas siguen pendientes de asignación. Consulta la <a href="https://jdmprodepor.com/futbol-7-senior-2026-2027/partido/28225" target="_blank" rel="noopener noreferrer">ficha oficial del debut</a>. El amistoso del 21 de octubre figura por separado.</p></div>
+      <div><strong>Publicadas las 9 jornadas del Grupo A</strong><p>Ya están publicadas las fechas de las nueve jornadas oficiales de M+Qpizza SKY FC, desde el 29 de octubre de 2026 hasta el 18 de enero de 2027. El debut, disputado el jueves 29 de octubre en el Campo de Fútbol José Copete n.º 1, terminó con victoria del Wolfosburgo FC por 7-2. El próximo encuentro será el jueves 12 de noviembre de 2026 a las 22:30 frente a Albacetium, en el Campo José Copete (Copete 1). Los horarios y campos de las jornadas posteriores siguen pendientes de asignación. Consulta la <a href="https://jdmprodepor.com/futbol-7-senior-2026-2027/partido/28225" target="_blank" rel="noopener noreferrer">ficha oficial del debut</a>. El amistoso del 21 de octubre figura por separado.</p></div>
       <a href="https://jdmprodepor.com/futbol-7-senior-2026-2027/equipo/4514/mqpizza-sky-fc" target="_blank" rel="noopener noreferrer">Ver partidos oficiales de M+Qpizza SKY FC ↗</a>
     </div>
   </div>
@@ -756,14 +758,14 @@ window.SKY_DATA = {
 
   fixtures: [
     {
-      date: "2026-11-09",
+      date: "2026-11-12",
       round: "Liga · Grupo A · Jornada 2",
       competition: "liga",
       jornada: 2,
-      time: null,
+      time: "22:30",
       home: "M+Qpizza SKY FC",
       away: "Albacetium",
-      venue: null
+      venue: "Campo José Copete · Copete 1 · Albacete"
     },
     {
       date: "2026-11-16",
@@ -994,6 +996,14 @@ window.SKY_DATA = {
 
   news: [
     {
+      date: "2026-11-09",
+      title: "Semana de partido | M+Qpizza SKY FC vs Albacetium",
+      mediaType: "image",
+      media: "/previa-sky-albacetium-3x1.svg",
+      sponsorUrl: "https://muchomasquepizza.com",
+      text: "¡Volvemos a la carga! El jueves 12 de noviembre de 2026 a las 22:30, M+Qpizza SKY FC recibe a Albacetium en el Campo José Copete (Copete 1), en la jornada 2 del Grupo A de la Liga Senior de Fútbol 7 de Albacete. Una nueva oportunidad para competir, seguir creciendo y luchar por los tres puntos. Nuestro patrocinador, Mucho Más Que Pizza, nos acompaña con su promoción 3x1 todos los días y servicio a domicilio por solo 3 € más. Consulta la promoción en muchomasquepizza.com. ¡Vamos SKY, todos a una!"
+    },
+    {
       date: "2026-10-29",
       title: "Crónica J1 | Wolfosburgo FC 7-2 M+Qpizza SKY FC",
       mediaType: "image",
@@ -1219,6 +1229,7 @@ function renderNews(){
           <time>${dateFmt(n.date)}</time>
           <h3>${esc(n.title)}</h3>
           <p>${esc(n.text)}</p>
+          ${n.sponsorUrl ? `<a href="${esc(n.sponsorUrl)}" target="_blank" rel="noopener noreferrer" class="news-sponsor-cta">🍕 Ver promoción de Mucho Más Que Pizza ↗</a>` : ""}
         </div>
       </article>`;
   }).join("");
