@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Semana de partido: M+Qpizza SKY FC contra Albacetium. Jueves 12 de noviembre, 22:30, José Copete, Copete 1. Promo patrocinador Mucho Más Que Pizza 3 por 1 todos los días, a domicilio por 3 euros más.">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0868be"/><stop offset=".38" stop-color="#041e42"/><stop offset="1" stop-color="#020b1d"/></linearGradient><radialGradient id="glow"><stop stop-color="#228afc" stop-opacity=".68"/><stop offset="1" stop-color="#0b2242" stop-opacity="0"/></radialGradient><linearGradient id="l" x1="0" x2="1"><stop stop-color="#2098ff"/><stop offset="1" stop-color="#0854cf"/></linearGradient><filter id="sh"><feGaussianBlur stdDeviation="18"/></filter><pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" stroke="#4aa8ff" stroke-opacity=".08" fill="none"/></pattern></defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+<ellipse cx="230" cy="470" rx="500" ry="520" fill="url(#glow)"/><path d="M0 760 Q500 695 1600 740V900H0Z" fill="#092b29" opacity=".55"/><path d="M0 820 L1600 780" stroke="#d9f1ff" stroke-opacity=".15" stroke-width="3"/>
+<path d="M40 80H880" stroke="#ffffff" stroke-opacity=".35" stroke-width="3"/><path d="M40 80H340" stroke="#1aa8ff" stroke-width="9"/>
+<text x="70" y="147" fill="#e1f4ff" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="43" letter-spacing="4">FÚTBOL 7 SÉNIOR  ·  LIGA  ·  GRUPO A</text>
+<text x="65" y="269" fill="#ffffff" font-family="Arial Black,Arial,sans-serif" font-weight="1000" font-size="115" letter-spacing="-6">SEMANA</text>
+<text x="68" y="377" fill="#1ca8ff" font-family="Arial Black,Arial,sans-serif" font-weight="1000" font-size="98" letter-spacing="-6">DE PARTIDO</text>
+<path d="M65 394H945" stroke="#139aff" stroke-width="10" stroke-linecap="round"/>
+<rect x="65" y="465" width="820" height="122" rx="18" fill="#042650" stroke="#2999f6" stroke-width="2"/>
+<text x="100" y="541" fill="#fff" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="46">SKY FC</text><text x="395" y="541" fill="#ffcc42" font-family="Arial Black,Arial,sans-serif" font-size="48">VS</text><text x="500" y="541" fill="#fff" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="41">ALBACETIUM</text>
+<text x="70" y="666" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="46">JUEVES, 12 NOVIEMBRE 2026</text><text x="70" y="726" fill="#ffcf46" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="52">22:30 H</text>
+<text x="70" y="784" fill="#dceeff" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="34">CAMPO JOSÉ COPETE  ·  COPETE 1</text>
+<text x="1160" y="107" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="27" font-weight="900" letter-spacing="3">PATROCINADOR OFICIAL</text>
+<circle cx="1240" cy="474" r="280" fill="#c70812" opacity=".5" filter="url(#sh)"/><circle cx="1240" cy="464" r="278" fill="#e30b17" stroke="#fff" stroke-width="13"/><circle cx="1240" cy="464" r="258" fill="none" stroke="#a50010" stroke-width="7"/>
+<text x="1240" y="304" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="1000" fill="#ffffff" font-size="38" letter-spacing="1.5">TODOS LOS DÍAS</text>
+<text x="1240" y="533" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="1000" fill="#ffffff" stroke="#141414" stroke-width="4" paint-order="stroke" font-size="194">3x1</text>
+<rect x="1014" y="573" width="452" height="73" rx="14" fill="#ffffff"/>
+<text x="1240" y="603" font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" font-size="25" fill="#171717">Y A DOMICILIO POR SOLO</text>
+<text x="1240" y="636" font-family="Arial Black,Arial,sans-serif" font-weight="1000" text-anchor="middle" font-size="30" fill="#d70b18">3€ MÁS</text>
+<text x="1240" y="695" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" fill="#ffffff" font-size="31">muchomasquepizza.com</text>
+<text x="800" y="863" text-anchor="middle" fill="#b7e6ff" font-size="22" font-family="Arial,Helvetica,sans-serif" font-weight="700" letter-spacing="4">M+QPIZZA SKY FC  ·  ALBACETE 2026/27</text>
+</svg>
