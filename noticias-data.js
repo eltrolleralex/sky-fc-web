@@ -2,6 +2,17 @@
 window.SKY_NEWS = [
   {
     "date": "2026-11-09",
+    "title": "David Sánchez y Calvo vuelven hoy a jugar con el SKY FC",
+    "mediaType": "image",
+    "mediaRef": "crest",
+    "text": "El M+Qpizza SKY FC recupera a dos jugadores para el amistoso de hoy, 9 de noviembre, ante Wolfosburgo FC. David Sánchez Ramírez (14) y Javier Sánchez Martínez, «Calvo» (5), vuelven a jugar después de sus lesiones. Ambos regresan al equipo esta noche en los Campos Municipales Alba Redondo (campo 4B).",
+    "slug": "regreso-david-calvo-9-noviembre",
+    "category": "Plantilla",
+    "cover": "/media/noticias/regreso-david-calvo-9-noviembre.svg",
+    "url": "/noticias/regreso-david-calvo-9-noviembre.html"
+  },
+  {
+    "date": "2026-11-09",
     "title": "¡Hoy hay amistoso! M+Qpizza SKY FC vs Wolfosburgo FC",
     "mediaType": "image",
     "mediaRef": "crest",
@@ -17,7 +28,7 @@ window.SKY_NEWS = [
     "title": "Javi Mendoza, dorsal 15, ya figura inscrito en Prodepor",
     "mediaType": "image",
     "mediaRef": "crest",
-    "text": "El club ha recibido confirmación de la inscripción en Prodepor de Javier Mendoza Sánchez, JAVI, que lucirá el dorsal 15 esta temporada. Su estado en la plantilla se ha actualizado a Inscrito.",
+    "text": "El club ha recibido confirmación de la inscripción en Prodepor de Javier Mendoza Sánchez, que llevará el dorsal 15 y el nombre JAVI MENDOZA en su camiseta esta temporada. Su estado en la plantilla es Inscrito.",
     "slug": "javi-mendoza-dorsal-15",
     "category": "Plantilla",
     "cover": "/media/noticias/javi-mendoza-dorsal-15.svg",
