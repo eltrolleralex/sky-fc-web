@@ -149,7 +149,8 @@ window.SKY_DATA = {
         "number": 5,
         "name": "CALVO",
         "fullName": "Javier Sánchez Martínez",
-        "status": "Inscrito"
+        "status": "Inscrito",
+        "returnNote": "Regresa hoy · 09/11"
     },
     {
         "number": 6,
@@ -186,11 +187,12 @@ window.SKY_DATA = {
         "number": 14,
         "name": "DAVID",
         "fullName": "David Sánchez Ramírez",
-        "status": "Inscrito"
+        "status": "Inscrito",
+        "returnNote": "Regresa hoy · 09/11"
     },
     {
         "number": 15,
-        "name": "JAVI",
+        "name": "JAVI MENDOZA",
         "fullName": "Javier Mendoza Sánchez",
         "status": "Inscrito"
     },
@@ -257,17 +259,17 @@ window.SKY_DATA = {
       player: "David Sánchez Ramírez · Dorsal 14",
       type: "Golpe en el pie tras recibir un pisotón",
       since: "2026-10-29",
-      status: "Lesionado · pendiente de evolución",
-      context: "Jornada 1 de liga frente a Wolfosburgo FC · Tuvo que retirarse del campo de juego",
-      estimatedReturn: "Por confirmar"
+      status: "De vuelta al equipo · juega hoy",
+      context: "Jornada 1 frente a Wolfosburgo FC · Regresa en el amistoso del 9 de noviembre",
+      returnDate: "2026-11-09"
     },
     {
       player: "Javi «Calvo» · Javier Sánchez Martínez",
       type: "Esguince",
       since: "2026-10-21",
-      status: "Lesionado · pendiente de evolución",
-      context: "Partido amistoso del miércoles 21 de octubre",
-      estimatedReturn: "Por confirmar"
+      status: "De vuelta al equipo · juega hoy",
+      context: "Lesión en el amistoso del 21 de octubre · Regresa en el amistoso del 9 de noviembre",
+      returnDate: "2026-11-09"
     },
     {
       player: "Sergio Requena Megías · Dorsal 4 reservado",
