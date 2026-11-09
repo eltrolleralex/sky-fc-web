@@ -396,6 +396,37 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
 .league-match-info a{font-weight:850;color:var(--gold);text-decoration:underline;text-underline-offset:4px}
 @media(max-width:640px){.official-league-frame iframe{height:640px}.league-official-banner{padding:18px}.league-official-banner .btn{width:100%}}
 
+
+/* Editorial SKY FC */
+#noticias{padding:78px 0 92px}
+#noticias h2{font-size:clamp(2.1rem,4.8vw,3.9rem);letter-spacing:-.055em;line-height:1.06}
+.news-grid{gap:20px}
+.news-card,.news-card.featured{grid-row:auto;background:linear-gradient(165deg,#0e2e5d,#06182f);border:1px solid rgba(185,211,255,.2);border-radius:19px;overflow:hidden}
+.news-card.featured{grid-column:span 8}
+.news-click{display:flex;flex-direction:column;height:100%;color:inherit;text-decoration:none}
+.news-click:focus-visible{outline:3px solid #f5bb35;outline-offset:-4px}
+.news-media,.news-card.featured .news-media{aspect-ratio:16/9;background:#071a35}
+.news-media img.news-poster{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s}
+.news-card:hover .news-poster{transform:scale(1.045)}
+.news-media img.news-club-crest{position:absolute;z-index:3;width:54px;height:54px;top:14px;right:13px;object-fit:contain;background:#05152bde;border-radius:50%;border:1px solid #ffffff39;padding:6px}
+.news-badge{border-radius:8px;left:15px;top:15px;font-size:.68rem}
+.news-card:not(.featured) .news-badge{background:#ddeafb;color:#071a31}
+.news-body,.news-card.featured .news-body{display:flex;flex-direction:column;flex:1;padding:22px 24px 25px}
+.news-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.71rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+.news-meta span{color:#ffd169}
+.news-meta time{color:#adc8e4}
+.news-card h3{font-size:1.21rem;letter-spacing:-.02em;line-height:1.27;margin:12px 0}
+.news-card.featured h3{font-size:clamp(1.55rem,3vw,2.3rem)}
+.news-card p,.news-card.featured p{font-size:.91rem;line-height:1.6;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;color:#b1c8e1}
+.news-card.featured p{font-size:1rem}
+.news-cta{margin-top:auto;padding-top:20px;color:#ffd473;font-weight:900;font-size:.85rem}
+.news-card:hover .news-cta{color:white}
+.news-more{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;margin-top:30px}
+.news-more a{background:var(--gold);color:#051630;border-radius:10px;padding:14px 19px;font-weight:900}
+.news-more a:hover{background:#ffdc80}
+.news-more>span{color:var(--muted);font-size:.85rem}
+@media(max-width:900px){.news-card.featured{grid-column:1/-1}.news-card{grid-column:span 6}}
+@media(max-width:580px){.news-card,.news-card.featured{grid-column:1}.news-media,.news-card.featured .news-media{aspect-ratio:16/9}.news-media img.news-club-crest{width:44px;height:44px}}
 </style>
   <script type="application/ld+json">
 {
@@ -501,12 +532,13 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
     <div class="section-head">
       <div>
         <div class="kicker">Actualidad M+Qpizza SKY FC</div>
-        <h2>Lo último del club</h2>
+        <h2>La actualidad del SKY FC</h2>
         <div class="news-headline">Noticias, comunicados y vida del equipo</div>
       </div>
       <p>Todo lo que pasa alrededor de M+Qpizza SKY FC: entrenamientos, novedades de plantilla, comunicados, previas, resultados y contenido del equipo.</p>
     </div>
     <div class="news-grid" id="news"></div>
+    <div class="news-more"><a href="/noticias.html">Ver todas las noticias <span aria-hidden="true">↗</span></a><span>Historias, partidos y actualidad del club.</span></div>
   </div>
 </section>
 
@@ -737,6 +769,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
   </div>
 </footer>
 
+<script src="/noticias-data.js"></script>
 <script>
 window.SKY_DATA = {
   club: {
@@ -1009,116 +1042,7 @@ window.SKY_DATA = {
 
   standings: [],
 
-  news: [
-    {
-      date: "2026-11-09",
-      title: "¡Hoy hay amistoso! M+Qpizza SKY FC vs Wolfosburgo FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      sponsorUrl: "https://muchomasquepizza.com",
-      text: "Este lunes 9 de noviembre, de 22:00 a 23:00 h, el M+Qpizza SKY FC vuelve a enfrentarse al Wolfosburgo FC en un amistoso en el campo 4B de los Campos Municipales Alba Redondo, en Albacete. Seguimos sumando minutos, corrigiendo errores y preparando los próximos compromisos de liga. Gracias a nuestro patrocinador, Mucho Más Que Pizza, que ofrece su promoción 3x1 todos los días y servicio a domicilio por solo 3 € más. ¡Hasta tocar el cielo!"
-    },
-    {
-      date: "2026-11-09",
-      title: "Javi Mendoza, dorsal 15, ya figura inscrito en Prodepor",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "El club ha recibido confirmación de la inscripción en Prodepor de Javier Mendoza Sánchez, JAVI, que lucirá el dorsal 15 esta temporada. Su estado en la plantilla se ha actualizado a Inscrito."
-    },
-    {
-      date: "2026-11-09",
-      title: "Semana de partido | M+Qpizza SKY FC vs Albacetium",
-      mediaType: "image",
-      media: "/previa-sky-albacetium-3x1.svg",
-      sponsorUrl: "https://muchomasquepizza.com",
-      text: "¡Volvemos a la carga! El jueves 12 de noviembre de 2026 a las 22:30, M+Qpizza SKY FC recibe a Albacetium en el Campo José Copete (Copete 1), en la jornada 2 del Grupo A de la Liga Senior de Fútbol 7 de Albacete. Una nueva oportunidad para competir, seguir creciendo y luchar por los tres puntos. Nuestro patrocinador, Mucho Más Que Pizza, nos acompaña con su promoción 3x1 todos los días y servicio a domicilio por solo 3 € más. Consulta la promoción en muchomasquepizza.com. ¡Vamos SKY, todos a una!"
-    },
-    {
-      date: "2026-10-29",
-      title: "Crónica J1 | Wolfosburgo FC 7-2 M+Qpizza SKY FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "El M+Qpizza SKY FC se estrenó en la Liga Sénior de Fútbol 7 2026/27 con una derrota por 7-2 frente al Wolfosburgo FC en el José Copete. Tras el gol olímpico rival en el minuto 6, Asier igualó el encuentro en el 19'. El equipo generó ocasiones, pero faltó acierto de cara a portería y, con el paso de los minutos, se hizo notar la superioridad física del rival. David Sánchez tuvo que retirarse tras recibir un pisotón en el pie, lo que obligó a reorganizar al conjunto. El SKY FC llegó por detrás al descanso y el Wolfosburgo amplió la ventaja durante la segunda mitad. Pese al resultado, el equipo recuperó intensidad en el tramo final y Rubén Delegido anotó nuestro segundo tanto en el minuto 60. Goleadores: Asier (19') y Rubén Delegido (60'). Desde el club deseamos a David una pronta recuperación y felicitamos al rival por su victoria. La jornada de descanso servirá para entrenar y corregir errores. ¡Esto no ha hecho más que empezar!"
-    },
-    {
-      date: "2026-10-21",
-      title: "Resultado del amistoso: M+Qpizza SKY FC 4-6 Muchismo del Sur FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "M+Qpizza SKY FC cayó por 4-6 ante Muchismo del Sur FC en el amistoso disputado el miércoles 21 de octubre en el campo 1A de los Campos de Fútbol Municipales Alba Redondo (Albacete). El resultado corresponde a los 60 minutos reglamentarios. Seguimos preparando el inicio de la temporada de liga 2026/27."
-    },
-    {
-      date: "2026-10-21",
-      title: "Publicado el calendario de las nueve jornadas de liga de M+Qpizza SKY FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "Prodepor ha publicado las fechas de las nueve jornadas del Grupo A. M+Qpizza SKY FC debutará el jueves 29 de octubre a las 22:30 h ante Wolfosburgo FC y cerrará esta fase el lunes 18 de enero de 2027 frente a 7 Estrellas. La fecha de todos los encuentros ya aparece en la sección Partidos. El primer partido se jugará en el Campo de Fútbol José Copete n.º 1 de Albacete; los horarios y campos de las otras ocho jornadas siguen pendientes de asignación."
-    },
-    {
-      date: "2026-10-19",
-      title: "Entrenamiento completado: preparados para el amistoso del miércoles",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "M+Qpizza SKY FC ha completado el entrenamiento previo al partido amistoso del miércoles 21 de octubre frente a Muchismo del Sur FC. Una sesión de preparación para seguir mejorando como equipo y llegar con buenas sensaciones al encuentro."
-    },
-    {
-      date: "2026-10-19",
-      title: "Amistoso confirmado: M+Qpizza SKY FC vs. Muchismo del Sur FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "Este miércoles 21 de octubre, de 22:00 a 23:00 h, M+Qpizza SKY FC disputará un partido amistoso ante Muchismo del Sur FC en el campo 1A de los Campos de Fútbol Municipales Alba Redondo (Albacete). Un nuevo encuentro de preparación para la temporada 2026/27."
-    },
-    {
-      date: "2026-10-14",
-      title: "El SKY FC presenta la documentación de su junta directiva ante la Federación",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "Este 14 de octubre, representantes del SKY FC han acudido a la Real Federación de Fútbol de Castilla-La Mancha para cumplimentar y entregar la documentación correspondiente a la junta directiva del club. Alejandro Ortega Mendoza es presidente y administrador; Asier González Sánchez, vicepresidente y capitán; Sergio Requena Megias, secretario y delegado; y Pedro Miguel Ruiz Richart, tesorero y entrenador. La documentación se ha presentado, sin que ello implique todavía una inscripción federativa aprobada."
-    },
-    {
-      date: "2026-10-09",
-      title: "M+Qpizza SKY FC, nueva denominación oficial del equipo",
-      mediaType: "image",
-      mediaRef: "sponsor",
-      text: "El equipo pasa a competir oficialmente bajo la denominación M+Qpizza SKY FC durante la temporada 2026/27, reforzando la unión con nuestro patrocinador principal, Mucho Más Que Pizza."
-    },
-    {
-      date: "2026-10-07",
-      title: "Pedro Miguel Ruiz Richart será el entrenador del SKY FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "Pedro Miguel Ruiz Richart se incorpora como entrenador del SKY FC para la temporada 2026/27 y será el encargado de dirigir al equipo desde la banda."
-    },
-    {
-      date: "2026-10-06",
-      title: "Primer entrenamiento del SKY FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "El SKY FC ha completado esta tarde su primer entrenamiento como equipo, dejando muy buenas sensaciones en esta primera toma de contacto de cara al inicio de la temporada."
-    },
-    {
-      date: "2026-10-05",
-      title: "SKY FC, oficialmente inscrito en la Liga de Fútbol 7 de Albacete",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "El SKY FC ya está oficialmente inscrito para disputar la temporada 2026/27 en la Liga de Fútbol 7 de Albacete."
-    },
-    {
-      date: "2026-10-05",
-      title: "Plantilla oficial 2026/27",
-      mediaType: "image",
-      mediaRef: "kitFront",
-      text: "M+Qpizza SKY FC cuenta con 14 jugadores inscritos para la temporada 2026/27."
-    },
-    {
-      date: "2026-10-05",
-      title: "Nueva web oficial de SKY FC",
-      mediaType: "image",
-      mediaRef: "crest",
-      text: "Resultados, próximos partidos, plantilla, lesiones, clasificación y toda la actualidad del equipo en un mismo sitio."
-    }
-  ]
-};
+  news: window.SKY_NEWS};
 
 </script>
 <script>
@@ -1237,34 +1161,23 @@ function renderStandings(){
 }
 
 function renderNews(){
-  const mediaRefs = {
-    crest: document.querySelector('img[alt="Escudo oficial SKY FC"]')?.src || document.querySelector('img[alt="Escudo oficial de SKY FC"]')?.src || "",
-    kitFront: document.querySelector('img[alt="Equipación frontal SKY FC"]')?.src || "",
-    kitBack: document.querySelector('img[alt="Equipación trasera SKY FC"]')?.src || "",
-    sponsor: document.querySelector('img[alt="Logo de Mucho Más Que Pizza"]')?.src || ""
-  };
-  $("#news").innerHTML = D.news.map((n,i)=>{
-    const src = n.media || mediaRefs[n.mediaRef] || mediaRefs.crest;
-    const isVideo = n.mediaType === "video" && n.media;
-    const media = isVideo
-      ? `<video src="${esc(src)}" controls playsinline preload="metadata"></video><span class="news-media-type">▶ Vídeo</span>`
-      : `<img src="${esc(src)}" alt="${esc(n.title)}" loading="${i===0 ? "eager" : "lazy"}"><span class="news-media-type">Imagen</span>`;
-    return `
-      <article class="panel news-card ${i===0 ? "featured" : ""}">
+  $("#news").innerHTML = D.news.slice(0,6).map((n,i)=>`
+    <article class="panel news-card ${i===0 ? "featured" : ""}">
+      <a class="news-click" href="${esc(n.url)}" aria-label="Leer noticia: ${esc(n.title)}">
         <div class="news-media">
-          <span class="news-badge">${i===0 ? "Destacada" : "Actualidad"}</span>
-          ${media}
+          <img class="news-poster" src="${esc(n.cover)}" alt="Cartel de ${esc(n.title)}" loading="${i===0 ? "eager" : "lazy"}">
+          <img class="news-club-crest" src="/escudo-oficial-skyfc.webp" alt="" loading="lazy">
+          <span class="news-badge">${i===0 ? "EN PORTADA" : esc(n.category)}</span>
         </div>
         <div class="news-body">
-          <time>${dateFmt(n.date)}</time>
+          <div class="news-meta"><span>${esc(n.category)}</span><time datetime="${esc(n.date)}">${dateFmt(n.date)}</time></div>
           <h3>${esc(n.title)}</h3>
           <p>${esc(n.text)}</p>
-          ${n.sponsorUrl ? `<a href="${esc(n.sponsorUrl)}" target="_blank" rel="noopener noreferrer" class="news-sponsor-cta">🍕 Ver promoción de Mucho Más Que Pizza ↗</a>` : ""}
+          <span class="news-cta">Leer noticia completa ↗</span>
         </div>
-      </article>`;
-  }).join("");
+      </a>
+    </article>`).join("");
 }
-
 $("#menuBtn").addEventListener("click",()=>$("#navLinks").classList.toggle("open"));
 $$("#navLinks a").forEach(a=>a.addEventListener("click",()=>$("#navLinks").classList.remove("open")));
 
