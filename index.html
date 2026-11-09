@@ -125,6 +125,7 @@ h2{margin:7px 0 0;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.035em}
 .player-num{position:absolute;right:14px;top:4px;font-size:5rem;line-height:1;font-weight:950;color:rgba(255,255,255,.055)}
 .player-card h3{margin:36px 0 4px;font-size:1.25rem}.pos{color:var(--gold);font-weight:850;font-size:.76rem;letter-spacing:.12em}
 .status{display:inline-flex;margin-top:14px;font-size:.76rem;padding:6px 9px;border-radius:999px;background:rgba(69,212,131,.10);color:var(--ok);border:1px solid rgba(69,212,131,.25)}
+.return-badge{display:inline-flex;margin-top:10px;padding:6px 9px;border:1px solid rgba(96,223,172,.4);border-radius:999px;color:#76eab4;background:rgba(36,137,101,.15);font-size:.76rem;font-weight:800}.injury-card.returned{border-color:rgba(96,223,172,.38)}.injury-card.returned .kicker{color:#76eab4}
 .injury-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .injury-card{padding:20px}.injury-card h3{margin:0 0 8px}.injury-card p{margin:6px 0;color:var(--muted)}
 .table-wrap{overflow:auto}
@@ -655,8 +656,8 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
 <section id="lesiones">
   <div class="container">
     <div class="section-head">
-      <div><div class="kicker">Parte del equipo</div><h2>Lesiones y bajas</h2></div>
-      <p>Información deportiva pública y resumida. Sin exponer datos médicos privados.</p>
+      <div><div class="kicker">Parte del equipo</div><h2>Lesiones y regresos</h2></div>
+      <p>Estado de las bajas y jugadores que vuelven a competir. Información deportiva pública y resumida.</p>
     </div>
     <div class="injury-grid" id="injuries"></div>
   </div>
@@ -873,6 +874,7 @@ function renderSquad(){
         ${p.captain ? `<span class="role-badge captain-badge">C · CAPITÁN</span>` : ""}
         ${p.clubRole ? `<span class="role-badge">${esc(p.clubRole)}</span>` : ""}
         <span class="status">${esc(p.status||"Inscrito")}</span>
+        ${p.returnNote ? `<span class="return-badge">${esc(p.returnNote)}</span>` : ""}
       </div>
     </article>`).join("") : `<div class="empty" style="grid-column:1/-1">La plantilla pública aún no está cargada.</div>`;
 }
@@ -891,13 +893,13 @@ function renderBoard(){
 
 function renderInjuries(){
   $("#injuries").innerHTML = D.injuries.length ? D.injuries.map(i=>`
-    <article class="panel injury-card">
+    <article class="panel injury-card ${i.returnDate ? "returned" : ""}">
       <div class="kicker">${esc(i.status||"Baja")}</div>
       <h3>${esc(i.player)}</h3>
       <p><strong>${esc(i.type)}</strong></p>
       ${i.context ? `<p>${esc(i.context)}</p>` : ""}
-      <p>Desde: <strong>${esc(i.sinceText || dateFmt(i.since) || "Pendiente")}</strong></p>
-      <p>Vuelta estimada: <strong>${esc(i.estimatedReturn||"Pendiente")}</strong></p>
+      <p>Inicio de la baja: <strong>${esc(i.sinceText || dateFmt(i.since) || "Pendiente")}</strong></p>
+      ${i.returnDate ? `<p>Regreso a los partidos: <strong>${esc(dateFmt(i.returnDate))}</strong></p>` : `<p>Vuelta estimada: <strong>${esc(i.estimatedReturn||"Pendiente")}</strong></p>`}
     </article>`).join("") : `<div class="empty" style="grid-column:1/-1">No hay partes de baja publicados.</div>`;
 }
 
