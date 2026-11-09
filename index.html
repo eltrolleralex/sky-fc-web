@@ -466,6 +466,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
   ]
 }
   </script>
+<link rel="stylesheet" href="/partidos.css">
 </head>
 <body>
 <header class="topbar">
@@ -592,9 +593,25 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
       <div><div class="kicker">Match center</div><h2>Partidos y resultados</h2></div>
       <p>Todo el calendario de M+Qpizza SKY FC en un mismo sitio, separado entre lo que viene y lo que ya se ha jugado.</p>
     </div>
+    <div class="mc-home-lead">
+      <div>
+        <div class="kicker">EL CENTRO DE CADA ENCUENTRO</div>
+        <h3>Vive cada partido desde dentro</h3>
+        <p>Marcadores, goleadores, tarjetas y cronología en fichas independientes, con todos los datos que vamos confirmando jornada a jornada.</p>
+      </div>
+      <a class="btn primary" href="/partidos.html">Explorar Match Center ↗</a>
+    </div>
     <div class="matches-grid">
-      <div class="panel"><div style="padding:20px 20px 4px"><div class="kicker">Próximos</div><h3>Calendario</h3></div><div id="fixtures" class="match-list"></div></div>
-      <div class="panel"><div style="padding:20px 20px 4px"><div class="kicker">Finalizados</div><h3>Resultados</h3></div><div id="results" class="match-list"></div></div>
+      <div class="mc-home-column">
+        <div class="mc-home-column-head"><div><div class="kicker">Lo que viene</div><h3>Próximos partidos</h3></div><span class="mc-tag">CALENDARIO</span></div>
+        <div id="fixtures" class="match-list"></div>
+        <div class="mc-home-more"><a href="/partidos.html">VER CALENDARIO COMPLETO ↗</a></div>
+      </div>
+      <div class="mc-home-column">
+        <div class="mc-home-column-head"><div><div class="kicker">Lo que pasó</div><h3>Últimos resultados</h3></div><span class="mc-tag friendly">FINALIZADOS</span></div>
+        <div id="results" class="match-list"></div>
+        <div class="mc-home-more"><a href="/partidos.html">VER TODOS LOS RESULTADOS ↗</a></div>
+      </div>
     </div>
     <div class="kicker" style="margin:22px 0 12px">Estadísticas de liga · No incluye amistosos</div>
     <div class="stats" id="stats"></div>
@@ -770,281 +787,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
 </footer>
 
 <script src="/noticias-data.js"></script>
-<script>
-window.SKY_DATA = {
-  club: {
-    name: "M+Qpizza SKY FC",
-    city: "Albacete",
-    season: "2026/27",
-    founded: 2026,
-    slogan: "Hasta tocar el cielo",
-    colors: ["Azul marino", "Blanco", "Oro"],
-    competition: "Liga de Fútbol 7 · Albacete",
-    instagram: "@skyfc.7",
-    instagramUrl: "https://www.instagram.com/skyfc.7/",
-    tiktok: "@skyfc.7",
-    tiktokUrl: "https://www.tiktok.com/@skyfc.7",
-    youtube: "SKY FC · Himno oficial",
-    youtubeUrl: "https://www.youtube.com/@SKYFC-7",
-    sponsor: "Mucho Más Que Pizza"
-  },
-
-  fixtures: [
-    {
-      date: "2026-11-09",
-      round: "Amistoso · Preparación",
-      competition: "amistoso",
-      time: "22:00",
-      home: "M+Qpizza SKY FC",
-      away: "Wolfosburgo FC",
-      venue: "Campos Municipales Alba Redondo · Campo 4B · Albacete"
-    },
-    {
-      date: "2026-11-12",
-      round: "Liga · Grupo A · Jornada 2",
-      competition: "liga",
-      jornada: 2,
-      time: "22:30",
-      home: "M+Qpizza SKY FC",
-      away: "Albacetium",
-      venue: "Campo José Copete · Copete 1 · Albacete"
-    },
-    {
-      date: "2026-11-16",
-      round: "Liga · Grupo A · Jornada 3",
-      competition: "liga",
-      jornada: 3,
-      time: null,
-      home: "Manchegan Warrios",
-      away: "M+Qpizza SKY FC",
-      venue: null
-    },
-    {
-      date: "2026-11-23",
-      round: "Liga · Grupo A · Jornada 4",
-      competition: "liga",
-      jornada: 4,
-      time: null,
-      home: "M+Qpizza SKY FC",
-      away: "Muchismo del SUR",
-      venue: null
-    },
-    {
-      date: "2026-11-30",
-      round: "Liga · Grupo A · Jornada 5",
-      competition: "liga",
-      jornada: 5,
-      time: null,
-      home: "BixsGang FC",
-      away: "M+Qpizza SKY FC",
-      venue: null
-    },
-    {
-      date: "2026-12-14",
-      round: "Liga · Grupo A · Jornada 6",
-      competition: "liga",
-      jornada: 6,
-      time: null,
-      home: "M+Qpizza SKY FC",
-      away: "OLD Legends",
-      venue: null
-    },
-    {
-      date: "2026-12-21",
-      round: "Liga · Grupo A · Jornada 7",
-      competition: "liga",
-      jornada: 7,
-      time: null,
-      home: "M+Qpizza SKY FC",
-      away: "CLUB Deportivo Albacete",
-      venue: null
-    },
-    {
-      date: "2027-01-11",
-      round: "Liga · Grupo A · Jornada 8",
-      competition: "liga",
-      jornada: 8,
-      time: null,
-      home: "Aitor Barbero FC",
-      away: "M+Qpizza SKY FC",
-      venue: null
-    },
-    {
-      date: "2027-01-18",
-      round: "Liga · Grupo A · Jornada 9",
-      competition: "liga",
-      jornada: 9,
-      time: null,
-      home: "M+Qpizza SKY FC",
-      away: "7 Estrellas",
-      venue: null
-    }
-  ],
-
-  results: [
-    {
-      date: "2026-10-29",
-      round: "Liga · Grupo A · Jornada 1",
-      competition: "liga",
-      jornada: 1,
-      home: "Wolfosburgo FC",
-      away: "M+Qpizza SKY FC",
-      homeScore: 7,
-      awayScore: 2,
-      venue: "Campo de Fútbol José Copete n.º 1 · Albacete"
-    },
-    {
-      date: "2026-10-21",
-      round: "Amistoso · 60 minutos reglamentarios",
-      competition: "amistoso",
-      home: "M+Qpizza SKY FC",
-      away: "Muchismo del Sur FC",
-      homeScore: 4,
-      awayScore: 6,
-      venue: "Campos de Fútbol Municipales Alba Redondo · Campo 1A · Albacete"
-    }
-  ],
-
-  squad: [
-    {
-        "number": 5,
-        "name": "CALVO",
-        "fullName": "Javier Sánchez Martínez",
-        "status": "Inscrito"
-    },
-    {
-        "number": 6,
-        "name": "ROSIN",
-        "fullName": "Alejandro Díez Rosingana",
-        "status": "Inscrito"
-    },
-    {
-        "number": 7,
-        "name": "QUIQUE",
-        "fullName": "Quique García Jiménez",
-        "status": "Inscrito"
-    },
-    {
-        "number": 8,
-        "name": "RUBEN",
-        "fullName": "Ruben Tarancon Albujer",
-        "status": "Inscrito"
-    },
-    {
-        "number": 10,
-        "name": "ASIER",
-        "fullName": "Asier González Sánchez",
-        "status": "Inscrito",
-        "captain": true
-    },
-    {
-        "number": 11,
-        "name": "MARTÍN",
-        "fullName": "Martín Álvarez Castillo",
-        "status": "Inscrito"
-    },
-    {
-        "number": 14,
-        "name": "DAVID",
-        "fullName": "David Sánchez Ramírez",
-        "status": "Inscrito"
-    },
-    {
-        "number": 15,
-        "name": "JAVI",
-        "fullName": "Javier Mendoza Sánchez",
-        "status": "Inscrito"
-    },
-    {
-        "number": 16,
-        "name": "SERGIO",
-        "fullName": "Sergio Muñoz Fernández",
-        "status": "Inscrito"
-    },
-    {
-        "number": 17,
-        "name": "J.SILVESTRE",
-        "fullName": "Javier Sánchez Silvestre",
-        "status": "Inscrito"
-    },
-    {
-        "number": 18,
-        "name": "ALEX",
-        "fullName": "Alejandro Ortega Mendoza",
-        "status": "Inscrito",
-        "clubRole": "Administrador"
-    },
-    {
-        "number": 19,
-        "name": "PARDO",
-        "fullName": "Miguel Pardo Fernández",
-        "status": "Inscrito"
-    },
-    {
-        "number": 20,
-        "name": "PABLO.P",
-        "fullName": "Pablo Perez Cano",
-        "status": "Inscrito"
-    },
-    {
-        "number": 22,
-        "name": "PEDRO",
-        "fullName": "Pedro Garcia Sanchez",
-        "status": "Inscrito"
-    },
-    {
-        "number": 93,
-        "name": "JESÚS",
-        "fullName": "Jesús Blázquez Rodríguez",
-        "status": "Inscrito"
-    },
-    {
-        "number": 99,
-        "name": "RUBEN",
-        "fullName": "Rubén Delegido Muñoz",
-        "status": "Inscrito"
-    }
-],
-
-  board: [
-    { role: "Presidente", name: "Alejandro Ortega Mendoza", secondaryRole: "Administrador" },
-    { role: "Vicepresidente", name: "Asier González Sánchez", secondaryRole: "Capitán" },
-    { role: "Secretario", name: "Sergio Requena Megias", secondaryRole: "Delegado" },
-    { role: "Tesorero", name: "Pedro Miguel Ruiz Richart", secondaryRole: "Entrenador" }
-  ],
-
-  injuries: [
-    {
-      player: "David Sánchez Ramírez · Dorsal 14",
-      type: "Golpe en el pie tras recibir un pisotón",
-      since: "2026-10-29",
-      status: "Lesionado · pendiente de evolución",
-      context: "Jornada 1 de liga frente a Wolfosburgo FC · Tuvo que retirarse del campo de juego",
-      estimatedReturn: "Por confirmar"
-    },
-    {
-      player: "Javi «Calvo» · Javier Sánchez Martínez",
-      type: "Esguince",
-      since: "2026-10-21",
-      status: "Lesionado · pendiente de evolución",
-      context: "Partido amistoso del miércoles 21 de octubre",
-      estimatedReturn: "Por confirmar"
-    },
-    {
-      player: "Sergio Requena Megías · Dorsal 4 reservado",
-      type: "Lesión de menisco",
-      sinceText: "Fecha no especificada",
-      status: "Lesionado · pendiente de tramitar ficha",
-      context: "Delegado del club · dorsal reservado para su futura incorporación como jugador",
-      estimatedReturn: "Por confirmar"
-    }
-  ],
-
-  standings: [],
-
-  news: window.SKY_NEWS};
-
-</script>
+<script src="/sky-data.js"></script>
 <script>
 const D = window.SKY_DATA;
 const $ = (s) => document.querySelector(s);
@@ -1072,22 +815,28 @@ function renderQuick(){
   $("#lastQuick").innerHTML = lr ? `${esc(lr.home)} ${lr.homeScore}-${lr.awayScore} ${esc(lr.away)}<small>${dateFmt(lr.date)}</small>` : `Sin resultados<small>Temporada 2026/27</small>`;
 }
 
+function matchDetailLink(m){
+  const skyName = name => /SKY\s*FC/i.test(name||"");
+  const other = skyName(m.home) ? m.away : m.home;
+  const slug = String(other||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
+  const id = m.competition === "liga" ? "liga-j"+m.jornada+"-"+m.date : "amistoso-"+m.date+"-"+slug;
+  return "/partido.html?partido="+encodeURIComponent(id);
+}
+function homeMatchCard(m){
+  const final = Number.isFinite(m.homeScore)&&Number.isFinite(m.awayScore);
+  const team = name => '<span class="mc-home-team">'+(/SKY\s*FC/i.test(name||"")?'<img src="/escudo-oficial-skyfc.webp" alt="Escudo SKY FC">':"")+esc(name)+'</span>';
+  return '<a class="mc-home-card" href="'+matchDetailLink(m)+'" aria-label="Abrir ficha del partido '+esc(m.home)+' contra '+esc(m.away)+'">'
+    +'<div class="mc-home-card-top"><span>'+(m.competition==="liga"?"● LIGA":"● AMISTOSO")+'</span><span>'+esc(m.date?dateFmt(m.date):"Fecha pendiente")+'</span></div>'
+    +'<div class="mc-home-card-sides">'+team(m.home)+'<strong class="mc-home-score">'+(final?m.homeScore+" : "+m.awayScore:"VS")+'</strong>'+team(m.away)+'</div>'
+    +'<div class="mc-home-foot"><span>'+esc(m.round||"")+(m.time?" · "+esc(m.time):"")+'</span><strong>VER FICHA ↗</strong></div></a>';
+}
 function renderMatches(){
-  const f = $("#fixtures"), r = $("#results");
-  const upcoming = D.fixtures.filter(m => !m.date || new Date(m.date + "T23:59:59") >= new Date());
-  f.innerHTML = upcoming.length ? upcoming.map(m=>`
-    <article class="match-card">
-      <div class="match-date">${m.date ? dateFmt(m.date) : "Sin fecha"}<small>${esc(m.round||"")} · ${esc(m.time || "Hora por asignar")}</small></div>
-      <div class="teams">${esc(m.home)} <span>vs</span> ${esc(m.away)}<small style="display:block;color:var(--muted);font-weight:500">${esc(m.venue || "Campo sin asignar")}</small></div>
-      <div class="pill">${m.competition === "liga" ? "LIGA" : "AMISTOSO"}</div>
-    </article>`).join("") : `<div class="empty">Todavía no hay próximos partidos publicados.</div>`;
-
-  r.innerHTML = D.results.length ? D.results.map(m=>`
-    <article class="match-card">
-      <div class="match-date">${dateFmt(m.date)}<small>${esc(m.round||"")}</small></div>
-      <div class="teams">${esc(m.home)} <span>vs</span> ${esc(m.away)}</div>
-      <div class="score">${m.homeScore} - ${m.awayScore}</div>
-    </article>`).join("") : `<div class="empty">Todavía no hay resultados publicados.</div>`;
+  const f=$("#fixtures"),r=$("#results");
+  const upcoming=D.fixtures.filter(m=>!m.date||new Date(m.date+"T23:59:59")>=new Date())
+    .sort((a,b)=>(a.date||"").localeCompare(b.date||""));
+  const completed=[...D.results].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  f.innerHTML=upcoming.length?upcoming.slice(0,4).map(homeMatchCard).join(""):'<div class="empty">No hay próximos partidos publicados.</div>';
+  r.innerHTML=completed.length?completed.slice(0,4).map(homeMatchCard).join(""):'<div class="empty">Todavía no hay resultados publicados.</div>';
 }
 
 function teamStats(){
