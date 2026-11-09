@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sky-fc-web.vercel.app/</loc>
-    <lastmod>2026-10-09</lastmod>
-  </url>
+  <url><loc>https://sky-fc-web.vercel.app/</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias.html</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/amistoso-wolfosburgo-9-noviembre.html</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/javi-mendoza-dorsal-15.html</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/previa-sky-albacetium-jornada-2.html</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/cronica-wolfosburgo-jornada-1.html</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/resultado-amistoso-muchismo.html</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/calendario-9-jornadas.html</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/entreno-previo-amistoso.html</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/amistoso-muchismo-confirmado.html</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/documentacion-junta-directiva.html</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/mqpizza-denominacion-oficial.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/pedro-miguel-entrenador.html</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/primer-entrenamiento.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/inscripcion-liga-futbol-7.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/plantilla-oficial-2026-27.html</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://sky-fc-web.vercel.app/noticias/nueva-web-oficial.html</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>
