@@ -162,7 +162,7 @@ window.SKY_DATA = {
         "name": "CALVO",
         "fullName": "Javier Sánchez Martínez",
         "status": "Inscrito",
-        "returnNote": "Regresa hoy · 09/11"
+        "returnNote": "Reincorporado · 09/11"
     },
     {
         "number": 6,
@@ -200,7 +200,7 @@ window.SKY_DATA = {
         "name": "DAVID",
         "fullName": "David Sánchez Ramírez",
         "status": "Inscrito",
-        "returnNote": "Regresa hoy · 09/11"
+        "returnNote": "Reincorporado · 09/11"
     },
     {
         "number": 15,
@@ -266,30 +266,51 @@ window.SKY_DATA = {
     { role: "Tesorero", name: "Pedro Miguel Ruiz Richart", secondaryRole: "Entrenador" }
   ],
 
+  injuryUpdatedAt: "2026-11-10",
   injuries: [
     {
-      player: "David Sánchez Ramírez · Dorsal 14",
-      type: "Golpe en el pie tras recibir un pisotón",
+      id: "sergio-requena-menisco",
+      number: 4,
+      playerName: "Sergio Requena Megías",
+      role: "Delegado · dorsal reservado, aún no inscrito como jugador",
+      type: "Lesión de menisco",
+      sinceText: "Fecha no registrada",
+      state: "active",
+      context: "Pendiente de recuperación y de tramitar su ficha como jugador.",
+      returnNote: "Regreso sin fecha confirmada"
+    },
+    {
+      id: "david-sanchez-pie-2026",
+      number: 14,
+      playerName: "David Sánchez Ramírez",
+      role: "Jugador · dorsal 14",
+      type: "Molestias en el pie tras un pisotón",
       since: "2026-10-29",
-      status: "De vuelta al equipo · juega hoy",
-      context: "Jornada 1 frente a Wolfosburgo FC · Regresa en el amistoso del 9 de noviembre",
+      state: "recovered",
+      context: "Se retiró del debut liguero frente a Wolfosburgo FC.",
       returnDate: "2026-11-09"
     },
     {
-      player: "Javi «Calvo» · Javier Sánchez Martínez",
+      id: "javi-calvo-esguince-2026",
+      number: 5,
+      playerName: "Javier Sánchez Martínez «Calvo»",
+      role: "Jugador · dorsal 5",
       type: "Esguince",
       since: "2026-10-21",
-      status: "De vuelta al equipo · juega hoy",
-      context: "Lesión en el amistoso del 21 de octubre · Regresa en el amistoso del 9 de noviembre",
+      state: "recovered",
+      context: "Lesión en el amistoso frente a Muchismo del Sur FC.",
       returnDate: "2026-11-09"
     },
     {
-      player: "Sergio Requena Megías · Dorsal 4 reservado",
-      type: "Lesión de menisco",
-      sinceText: "Fecha no especificada",
-      status: "Lesionado · pendiente de tramitar ficha",
-      context: "Delegado del club · dorsal reservado para su futura incorporación como jugador",
-      estimatedReturn: "Por confirmar"
+      id: "alejandro-rosin-esguince-2026",
+      number: 6,
+      playerName: "Alejandro Díez Rosingana «Rosin»",
+      role: "Jugador · dorsal 6",
+      type: "Esguince",
+      since: "2026-10-19",
+      state: "recovered",
+      context: "Lesión en un entrenamiento. Reaparición en el encuentro del 29 de octubre.",
+      returnDate: "2026-10-29"
     }
   ],
 
