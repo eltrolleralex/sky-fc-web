@@ -110,7 +110,7 @@ window.SKY_DATA = {
       homeScore: 6,
       awayScore: 7,
       venue: "Campos Municipales Alba Redondo · Campo 4B · Albacete",
-      summary: "El SKY FC comenzó el amistoso con dificultades, pero mejoró conforme avanzó el encuentro. Aproximadamente a mitad del partido perdía por 2-6; la reacción posterior le permitió acercarse hasta el 6-7 definitivo, quedándose a un solo gol del empate. Resumen provisional a la espera de completar la crónica.",
+      summary: "El SKY FC comenzó el amistoso con dificultades y llegó a ir perdiendo 2-6 aproximadamente a mitad del encuentro. El equipo fue creciendo con el paso de los minutos y reaccionó hasta quedarse a un solo gol del empate (6-7). Rubén Delegido y Asier González marcaron dos goles cada uno, Pablo Pérez y Javi Mendoza sumaron uno, y Quique García asistió en uno de los tantos de Asier. Javi Mendoza debutó con el SKY FC y se estrenó como goleador.",
       events: [
         { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99 },
         { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99 },
