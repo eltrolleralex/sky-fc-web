@@ -1,6 +1,18 @@
 /* Catálogo oficial de noticias SKY FC */
 window.SKY_NEWS = [
   {
+    "date": "2026-11-10",
+    "title": "SKY FC se queda a un paso de la remontada frente al Wolfosburgo (6-7)",
+    "mediaType": "image",
+    "mediaRef": "crest",
+    "sponsorUrl": "https://muchomasquepizza.com",
+    "text": "El M+Qpizza SKY FC pasó de un 2-6 en contra al 6-7 final en el amistoso del 9 de noviembre contra Wolfosburgo. Rubén Delegido y Asier González marcaron dos goles cada uno; Pablo Pérez y Javi Mendoza anotaron uno. Quique García asistió en uno de los tantos de Asier. Javi Mendoza se estrenó con gol en su primer partido con el SKY FC.",
+    "slug": "cronica-sky-wolfosburgo-6-7-9-noviembre",
+    "category": "Crónicas",
+    "cover": "/media/noticias/cronica-sky-wolfosburgo-6-7-9-noviembre.svg",
+    "url": "/noticias/cronica-sky-wolfosburgo-6-7-9-noviembre.html"
+  },
+  {
     "date": "2026-11-09",
     "title": "David Sánchez y Calvo vuelven hoy a jugar con el SKY FC",
     "mediaType": "image",
