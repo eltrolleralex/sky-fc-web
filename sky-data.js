@@ -18,15 +18,6 @@ window.SKY_DATA = {
 
   fixtures: [
     {
-      date: "2026-11-09",
-      round: "Amistoso · Preparación",
-      competition: "amistoso",
-      time: "22:00",
-      home: "M+Qpizza SKY FC",
-      away: "Wolfosburgo FC",
-      venue: "Campos Municipales Alba Redondo · Campo 4B · Albacete"
-    },
-    {
       date: "2026-11-12",
       round: "Liga · Grupo A · Jornada 2",
       competition: "liga",
@@ -109,6 +100,27 @@ window.SKY_DATA = {
   ],
 
   results: [
+    {
+      date: "2026-11-09",
+      round: "Amistoso · Preparación",
+      competition: "amistoso",
+      time: "22:00",
+      home: "M+Qpizza SKY FC",
+      away: "Wolfosburgo FC",
+      homeScore: 6,
+      awayScore: 7,
+      venue: "Campos Municipales Alba Redondo · Campo 4B · Albacete",
+      summary: "El SKY FC comenzó el amistoso con dificultades, pero mejoró conforme avanzó el encuentro. Aproximadamente a mitad del partido perdía por 2-6; la reacción posterior le permitió acercarse hasta el 6-7 definitivo, quedándose a un solo gol del empate. Resumen provisional a la espera de completar la crónica.",
+      events: [
+        { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99 },
+        { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99 },
+        { type: "goal", team: "sky", player: "Asier González Sánchez", number: 10, assist: "Quique García Jiménez" },
+        { type: "goal", team: "sky", player: "Asier González Sánchez", number: 10 },
+        { type: "goal", team: "sky", player: "Pablo Perez Cano", number: 20 },
+        { type: "goal", team: "sky", player: "Javier Mendoza Sánchez", number: 15 }
+      ],
+      cards: null
+    },
     {
       date: "2026-10-29",
       round: "Liga · Grupo A · Jornada 1",
