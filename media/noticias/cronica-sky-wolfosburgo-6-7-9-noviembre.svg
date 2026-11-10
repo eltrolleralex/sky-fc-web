@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Crónica SKY FC 6 - 7 Wolfosburgo FC: una reacción de orgullo">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#04132d"/><stop offset=".58" stop-color="#0e376e"/><stop offset="1" stop-color="#030d1d"/></linearGradient><linearGradient id="gold" x1="0" x2="1"><stop stop-color="#f8da78"/><stop offset="1" stop-color="#f5a81e"/></linearGradient></defs>
+<rect width="1200" height="675" fill="url(#bg)"/><g opacity=".11" stroke="#b7d5fc" fill="none"><path d="M0 80h1200M0 590h1200M160 0v675M1040 0v675" stroke-width="3"/><circle cx="600" cy="335" r="275" stroke-width="3"/><path d="M600 0v675"/></g>
+<path d="M0 0L470 0 85 675H0Z" fill="#62b5ff" opacity=".09"/><path d="M1200 0L780 0 1120 675H1200Z" fill="#f5bb35" opacity=".08"/>
+<rect x="70" y="61" width="8" height="46" rx="4" fill="#f5bb35"/><text x="98" y="97" font-size="26" font-family="Arial,sans-serif" font-weight="700" letter-spacing="6" fill="#e8f5ff">CRÓNICA · AMISTOSO</text>
+<text x="600" y="184" text-anchor="middle" font-size="62" font-family="Arial,sans-serif" font-weight="900" fill="#ffffff">UNA REACCIÓN DE ORGULLO</text>
+<rect x="80" y="244" width="1040" height="226" rx="30" fill="#03142c" stroke="#ffffff" stroke-opacity=".24"/>
+<text x="285" y="364" text-anchor="middle" font-size="40" font-family="Arial,sans-serif" font-weight="900" fill="#fff">SKY FC</text>
+<text x="902" y="364" text-anchor="middle" font-size="33" font-family="Arial,sans-serif" font-weight="800" fill="#fff">WOLFOSBURGO FC</text>
+<text x="600" y="397" text-anchor="middle" font-size="158" font-family="Arial,sans-serif" font-weight="900" fill="#fff">6<tspan fill="#f5bb35">:</tspan>7</text>
+<rect x="375" y="446" width="450" height="63" rx="14" fill="url(#gold)"/><text x="600" y="489" text-anchor="middle" font-size="34" font-family="Arial,sans-serif" font-weight="900" fill="#071a30">DEL 2-6 AL 6-7</text>
+<text x="600" y="569" text-anchor="middle" font-size="28" font-family="Arial,sans-serif" font-weight="800" fill="#ffffff">JAVI MENDOZA DEBUTA Y MARCA</text>
+<text x="600" y="623" text-anchor="middle" font-size="22" font-family="Arial,sans-serif" letter-spacing="3" fill="#c6ddf6">9 NOVIEMBRE 2026 · ALBACETE</text></svg>
