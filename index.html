@@ -468,6 +468,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
 }
   </script>
 <link rel="stylesheet" href="/partidos.css">
+  <link rel="stylesheet" href="/enfermeria.css">
 </head>
 <body>
 <header class="topbar">
@@ -653,13 +654,35 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
   </div>
 </section>
 
-<section id="lesiones">
+<section id="lesiones" class="medical-section" aria-labelledby="medicalTitle">
   <div class="container">
-    <div class="section-head">
-      <div><div class="kicker">Parte del equipo</div><h2>Lesiones y regresos</h2></div>
-      <p>Estado de las bajas y jugadores que vuelven a competir. Información deportiva pública y resumida.</p>
+    <header class="medical-head">
+      <div>
+        <span class="medical-eyebrow">SKY FC · Temporada 2026/27</span>
+        <h2 id="medicalTitle">Enfermería <em>SKY FC</em></h2>
+        <p class="medical-lead">Consulta el parte de bajas, las reincorporaciones y el historial de lesiones documentadas del club. Cada caso conserva su evolución, aunque el jugador ya se haya recuperado.</p>
+      </div>
+      <div class="medical-update"><span>Última revisión</span><time id="medicalUpdated" datetime="2026-11-10">10 nov 2026</time></div>
+    </header>
+    <div class="medical-summary" id="injuryStats" aria-label="Resumen de lesiones"></div>
+
+    <div class="medical-subhead"><span class="medical-pulse" aria-hidden="true"></span><h3>En seguimiento</h3><small>Casos abiertos</small></div>
+    <div class="medical-active" id="injuryActive" aria-live="polite"></div>
+
+    <div class="medical-history-heading">
+      <div><h3>Historial de lesiones</h3><p>Archivo de casos, fechas y regresos de la temporada.</p></div>
+      <small id="medicalHistoryCount" aria-live="polite"></small>
     </div>
-    <div class="injury-grid" id="injuries"></div>
+    <div class="medical-controls">
+      <div class="medical-filters" role="group" aria-label="Filtrar historial">
+        <button type="button" class="medical-filter is-active" data-medical-filter="all" aria-pressed="true">Todos</button>
+        <button type="button" class="medical-filter" data-medical-filter="active" aria-pressed="false">En recuperación</button>
+        <button type="button" class="medical-filter" data-medical-filter="recovered" aria-pressed="false">Recuperados</button>
+      </div>
+      <input class="medical-search" id="medicalSearch" type="search" aria-label="Buscar en el historial" placeholder="Buscar jugador o lesión..." autocomplete="off">
+    </div>
+    <div class="medical-history" id="injuryHistory"></div>
+    <p class="medical-disclaimer">Parte deportivo informativo: las fechas son las comunicadas al club. Cuando no existe una fecha de lesión o retorno confirmada, se indica expresamente. Estar en este registro no implica figurar como jugador inscrito.</p>
   </div>
 </section>
 
@@ -789,6 +812,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
 
 <script src="/noticias-data.js"></script>
 <script src="/sky-data.js"></script>
+<script src="/enfermeria.js"></script>
 <script>
 const D = window.SKY_DATA;
 const $ = (s) => document.querySelector(s);
@@ -892,15 +916,7 @@ function renderBoard(){
 }
 
 function renderInjuries(){
-  $("#injuries").innerHTML = D.injuries.length ? D.injuries.map(i=>`
-    <article class="panel injury-card ${i.returnDate ? "returned" : ""}">
-      <div class="kicker">${esc(i.status||"Baja")}</div>
-      <h3>${esc(i.player)}</h3>
-      <p><strong>${esc(i.type)}</strong></p>
-      ${i.context ? `<p>${esc(i.context)}</p>` : ""}
-      <p>Inicio de la baja: <strong>${esc(i.sinceText || dateFmt(i.since) || "Pendiente")}</strong></p>
-      ${i.returnDate ? `<p>Regreso a los partidos: <strong>${esc(dateFmt(i.returnDate))}</strong></p>` : `<p>Vuelta estimada: <strong>${esc(i.estimatedReturn||"Pendiente")}</strong></p>`}
-    </article>`).join("") : `<div class="empty" style="grid-column:1/-1">No hay partes de baja publicados.</div>`;
+  if (typeof window.renderSkyInjuryHub === "function") window.renderSkyInjuryHub(D);
 }
 
 function renderStandings(){
