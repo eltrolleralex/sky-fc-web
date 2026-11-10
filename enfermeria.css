@@ -1,0 +1,78 @@
+
+/* SKY FC · Enfermería y registro histórico · 2026/27 */
+#lesiones.medical-section{position:relative;isolation:isolate;overflow:hidden}
+#lesiones.medical-section::before{content:"";position:absolute;inset:0 0 auto;height:420px;pointer-events:none;background:radial-gradient(ellipse at 15% 8%,rgba(31,95,169,.22),transparent 59%),radial-gradient(ellipse at 90% 12%,rgba(245,187,53,.08),transparent 50%);z-index:-1}
+#lesiones .medical-head{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:24px}
+#lesiones .medical-eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--gold,#f5bb35);font-size:.74rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+#lesiones .medical-eyebrow::before{content:"";width:23px;height:2px;background:currentColor}
+#lesiones .medical-head h2{font-size:clamp(2.15rem,5vw,3.65rem);line-height:1.04;margin:12px 0}
+#lesiones .medical-head h2 em{font-style:normal;color:var(--gold,#f5bb35)}
+#lesiones .medical-lead{max-width:680px;color:#b8cee6;line-height:1.7;font-size:.95rem;margin:0}
+#lesiones .medical-update{flex:none;text-align:right;border:1px solid rgba(157,190,229,.18);background:rgba(4,21,46,.7);border-radius:14px;padding:12px 16px;color:#cee0f2;font-size:.82rem}
+#lesiones .medical-update span{display:block;text-transform:uppercase;letter-spacing:.14em;font-size:.65rem;font-weight:900;color:#88a7cb;margin-bottom:5px}
+#lesiones .medical-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:26px 0 36px}
+#lesiones .medical-number{border-radius:20px;padding:23px 24px;min-height:116px;border:1px solid rgba(120,166,216,.18);background:linear-gradient(145deg,rgba(12,43,86,.95),rgba(6,26,56,.93));position:relative;overflow:hidden}
+#lesiones .medical-number::after{content:"";position:absolute;right:-24px;top:-34px;border:1px solid rgba(255,255,255,.075);width:118px;height:118px;border-radius:50%}
+#lesiones .medical-number strong{display:block;font-size:2.55rem;line-height:1;font-weight:950;letter-spacing:-.065em}
+#lesiones .medical-number span{display:block;color:#b0c6e1;font-size:.82rem;font-weight:700;margin-top:9px}
+#lesiones .medical-number--open strong{color:#ffbb72}
+#lesiones .medical-number--closed strong{color:#6de0aa}
+#lesiones .medical-number--total strong{color:#f8c751}
+#lesiones .medical-subhead{display:flex;align-items:center;gap:12px;margin:0 0 16px}
+#lesiones .medical-subhead h3{font-size:1.35rem;letter-spacing:-.02em;margin:0}
+#lesiones .medical-subhead small{font-size:.82rem;color:#9db6d1}
+#lesiones .medical-pulse{width:10px;height:10px;background:#ffad5e;border-radius:50%;box-shadow:0 0 0 5px rgba(255,173,94,.14)}
+#lesiones .medical-active{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:38px}
+#lesiones .medical-feature{position:relative;overflow:hidden;background:linear-gradient(125deg,rgba(22,56,100,.92),rgba(6,26,54,.95) 64%);border:1px solid rgba(255,180,101,.36);border-radius:22px;padding:26px 28px;min-height:225px}
+#lesiones .medical-feature::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#ffc16f,transparent)}
+#lesiones .medical-jersey{position:absolute;right:16px;top:19px;font-size:6rem;font-weight:1000;line-height:1;color:rgba(255,255,255,.07);letter-spacing:-.07em;pointer-events:none}
+#lesiones .medical-feature .medical-feature-top{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:22px;position:relative}
+#lesiones .medical-chip{display:inline-flex;align-items:center;gap:7px;border-radius:999px;font-size:.73rem;font-weight:850;line-height:1.3;padding:7px 11px;border:1px solid rgba(255,175,98,.26);background:rgba(251,143,63,.13);color:#ffcb9b}
+#lesiones .medical-chip--recovered{border-color:rgba(90,222,156,.30);background:rgba(39,151,107,.14);color:#88efbb}
+#lesiones .medical-chip--muted{border-color:rgba(156,192,231,.19);background:rgba(156,192,231,.09);color:#bfcee2}
+#lesiones .medical-feature h4{font-size:1.46rem;letter-spacing:-.025em;margin:0 0 9px;position:relative}
+#lesiones .medical-feature .medical-condition{color:#f2ce9e;font-size:1.02rem;font-weight:750;margin:0 0 17px}
+#lesiones .medical-feature p{color:#b7cce3;line-height:1.58;margin:7px 0;max-width:470px;position:relative}
+#lesiones .medical-feature .medical-return{margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);color:#f2f4f7;font-weight:700}
+#lesiones .medical-no-open{grid-column:1/-1;background:rgba(59,171,118,.10);border:1px solid rgba(100,210,155,.28);padding:22px 26px;border-radius:18px;color:#c9efda}
+#lesiones .medical-history-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:0 0 16px}
+#lesiones .medical-history-heading h3{font-size:1.35rem;margin:0}
+#lesiones .medical-history-heading p{margin:6px 0 0;font-size:.86rem;color:#9db6d1}
+#lesiones .medical-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:19px}
+#lesiones .medical-filters{display:flex;flex-wrap:wrap;gap:6px}
+#lesiones .medical-filter{border:1px solid rgba(174,204,237,.17);background:rgba(255,255,255,.055);color:#bacee6;border-radius:100px;font-family:inherit;font-size:.79rem;font-weight:800;padding:10px 14px;cursor:pointer;transition:background .18s,border-color .18s,color .18s}
+#lesiones .medical-filter:hover{border-color:rgba(245,187,53,.45);color:white}
+#lesiones .medical-filter.is-active{color:#091b34;background:var(--gold,#f5bb35);border-color:var(--gold,#f5bb35)}
+#lesiones .medical-search{margin-left:auto;min-width:210px;max-width:330px;flex:1;border:1px solid rgba(174,204,237,.2);background:rgba(6,23,51,.78);color:white;border-radius:12px;font-family:inherit;font-size:.82rem;padding:11px 14px}
+#lesiones .medical-search::placeholder{color:#8fa9c9}
+#lesiones :is(.medical-filter,.medical-search,summary):focus-visible{outline:2px solid #f5bb35;outline-offset:3px}
+#lesiones .medical-history{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+#lesiones .medical-record{border:1px solid rgba(136,175,217,.19);border-radius:19px;overflow:hidden;background:linear-gradient(155deg,rgba(14,40,77,.93),rgba(5,23,51,.95));position:relative}
+#lesiones .medical-record--open{border-color:rgba(255,173,94,.30)}
+#lesiones .medical-record--closed{border-color:rgba(110,208,155,.23)}
+#lesiones .medical-record-head{display:flex;align-items:center;gap:14px;padding:19px 20px 10px}
+#lesiones .medical-record-number{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:13px;background:rgba(245,187,53,.105);color:#f8ce70;font-weight:1000;font-size:1.22rem;border:1px solid rgba(245,187,53,.14)}
+#lesiones .medical-record-titles{min-width:0;flex:1}
+#lesiones .medical-record h4{margin:0 0 4px;font-size:1.06rem;line-height:1.4}
+#lesiones .medical-record .medical-record-title{font-size:.81rem;color:#aabdd5;margin:0}
+#lesiones .medical-record-status{white-space:nowrap}
+#lesiones .medical-record-main{padding:10px 20px 16px}
+#lesiones .medical-record-main p{color:#acc4df;font-size:.82rem;margin:8px 0;line-height:1.55}
+#lesiones .medical-record-main p strong{color:#e7f1fc}
+#lesiones .medical-record-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+#lesiones .medical-meta-pill{display:inline-flex;padding:6px 9px;background:rgba(255,255,255,.05);border-radius:8px;color:#bdd0e8;font-size:.74rem}
+#lesiones .medical-details{border-top:1px solid rgba(174,204,237,.12)}
+#lesiones .medical-details summary{list-style:none;cursor:pointer;padding:13px 20px;color:#f5c467;font-size:.82rem;font-weight:850;display:flex;justify-content:space-between}
+#lesiones .medical-details summary::-webkit-details-marker{display:none}
+#lesiones .medical-details summary::after{content:"+";font-size:1.05rem}
+#lesiones .medical-details[open] summary::after{content:"−"}
+#lesiones .medical-timeline{list-style:none;margin:0;padding:4px 20px 17px 33px;border-top:1px solid rgba(174,204,237,.08)}
+#lesiones .medical-timeline li{position:relative;border-left:1px solid rgba(194,211,232,.19);padding:5px 0 16px 20px;color:#bfd2e9;font-size:.81rem;line-height:1.5}
+#lesiones .medical-timeline li::before{content:"";position:absolute;left:-5px;top:11px;width:9px;height:9px;border-radius:50%;background:#eabf6c}
+#lesiones .medical-timeline li:last-child{padding-bottom:0}
+#lesiones .medical-timeline strong{display:block;color:white;margin-bottom:2px}
+#lesiones .medical-empty{grid-column:1/-1;text-align:center;padding:35px 20px;border:1px dashed rgba(156,189,229,.22);border-radius:16px;color:#a6c0dd}
+#lesiones .medical-disclaimer{margin-top:18px;font-size:.77rem;line-height:1.65;color:#93abc7}
+@media(max-width:860px){#lesiones .medical-head{align-items:flex-start;flex-direction:column}#lesiones .medical-update{text-align:left}#lesiones .medical-active{grid-template-columns:1fr}}
+@media(max-width:680px){#lesiones .medical-summary{gap:8px}#lesiones .medical-number{padding:17px 12px;min-height:105px}#lesiones .medical-number strong{font-size:2.1rem}#lesiones .medical-number span{font-size:.73rem}#lesiones .medical-history{grid-template-columns:1fr}#lesiones .medical-search{margin-left:0;max-width:100%;flex-basis:100%}#lesiones .medical-feature{padding:24px 20px}#lesiones .medical-history-heading{align-items:flex-start;flex-direction:column}}
+@media(max-width:380px){#lesiones .medical-summary{grid-template-columns:1fr}#lesiones .medical-number{min-height:auto}#lesiones .medical-filter{padding:9px 11px;font-size:.74rem}}
