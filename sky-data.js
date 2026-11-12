@@ -25,7 +25,12 @@ window.SKY_DATA = {
       time: "22:30",
       home: "M+Qpizza SKY FC",
       away: "Albacetium",
-      venue: "Campo José Copete · Copete 1 · Albacete"
+      venue: "Campo José Copete · Copete 1 · Albacete",
+      callUp: {
+        numbers: [6, 7, 8, 10, 14, 16, 17, 18, 19, 20, 93, 99],
+        goalkeeper: 93,
+        publishedOn: "2026-11-12"
+      }
     },
     {
       date: "2026-11-16",
