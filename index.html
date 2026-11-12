@@ -125,6 +125,7 @@ h2{margin:7px 0 0;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.035em}
 .player-num{position:absolute;right:14px;top:4px;font-size:5rem;line-height:1;font-weight:950;color:rgba(255,255,255,.055)}
 .player-card h3{margin:36px 0 4px;font-size:1.25rem}.pos{color:var(--gold);font-weight:850;font-size:.76rem;letter-spacing:.12em}
 .status{display:inline-flex;margin-top:14px;font-size:.76rem;padding:6px 9px;border-radius:999px;background:rgba(69,212,131,.10);color:var(--ok);border:1px solid rgba(69,212,131,.25)}
+.status.pending{background:rgba(255,193,74,.11);color:#ffcf75;border-color:rgba(255,193,74,.35)}
 .return-badge{display:inline-flex;margin-top:10px;padding:6px 9px;border:1px solid rgba(96,223,172,.4);border-radius:999px;color:#76eab4;background:rgba(36,137,101,.15);font-size:.76rem;font-weight:800}.injury-card.returned{border-color:rgba(96,223,172,.38)}.injury-card.returned .kicker{color:#76eab4}
 .injury-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .injury-card{padding:20px}.injury-card h3{margin:0 0 8px}.injury-card p{margin:6px 0;color:var(--muted)}
@@ -632,6 +633,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted)}
     </div>
     <div class="squad-tools">
       <span class="pill"><strong id="squadCount">16</strong>&nbsp; jugadores en plantilla</span>
+      <span class="pill"><strong id="squadRegisteredCount">15</strong>&nbsp; inscritos</span>
       <span class="pill">Temporada 2026/27</span>
       <span class="pill">1 dorsal reservado sin ficha</span>
     </div>
@@ -888,6 +890,7 @@ function renderSquad(){
   const list = [...D.squad].sort((a,b)=>Number(a.number)-Number(b.number));
   const el=$("#squad");
   $("#squadCount").textContent=list.length;
+  $("#squadRegisteredCount").textContent=list.filter(p=>p.status==="Inscrito").length;
   el.innerHTML = list.length ? list.map(p=>`
     <article class="panel player-card ${p.captain ? "captain-card" : ""}">
       <div class="player-num">${esc(p.number)}</div>
@@ -897,7 +900,7 @@ function renderSquad(){
       <div class="player-badges">
         ${p.captain ? `<span class="role-badge captain-badge">C · CAPITÁN</span>` : ""}
         ${p.clubRole ? `<span class="role-badge">${esc(p.clubRole)}</span>` : ""}
-        <span class="status">${esc(p.status||"Inscrito")}</span>
+        <span class="status${p.status==="Inscrito"?"":" pending"}">${esc(p.status||"Pendiente de inscripción")}</span>
         ${p.returnNote ? `<span class="return-badge">${esc(p.returnNote)}</span>` : ""}
       </div>
     </article>`).join("") : `<div class="empty" style="grid-column:1/-1">La plantilla pública aún no está cargada.</div>`;
