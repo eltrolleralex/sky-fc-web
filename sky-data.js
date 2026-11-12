@@ -161,8 +161,7 @@ window.SKY_DATA = {
         "number": 5,
         "name": "CALVO",
         "fullName": "Javier Sánchez Martínez",
-        "status": "Inscrito",
-        "returnNote": "Reincorporado · 09/11"
+        "status": "Inscrito"
     },
     {
         "number": 6,
@@ -193,14 +192,13 @@ window.SKY_DATA = {
         "number": 11,
         "name": "MARTÍN",
         "fullName": "Martín Álvarez Castillo",
-        "status": "Inscrito"
+        "status": "Pendiente de inscripción"
     },
     {
         "number": 14,
         "name": "DAVID",
         "fullName": "David Sánchez Ramírez",
-        "status": "Inscrito",
-        "returnNote": "Reincorporado · 09/11"
+        "status": "Inscrito"
     },
     {
         "number": 15,
