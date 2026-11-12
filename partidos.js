@@ -26,6 +26,22 @@ function renderList(){
  function update(){var subset=games.filter(function(m){switch(filter){case "liga":return m.competition==="liga";case "amistoso":return m.competition==="amistoso";case "final":return finished(m);case "proximos":return !finished(m);default:return true}});grid.innerHTML=subset.map(each).join("")||'<div class="mc-empty">Todavía no hay partidos en esta categoría.</div>';$("#mc-match-count").textContent=subset.length+" partidos";document.querySelectorAll(".mc-filter").forEach(function(btn){btn.setAttribute("aria-pressed",String(btn.dataset.filter===filter))})}
  document.querySelectorAll(".mc-filter").forEach(function(b){b.addEventListener("click",function(){filter=b.dataset.filter;update()})});update()
 }
+
+function renderCallUp(m){
+ var spot=$("#mc-callup");
+ if(!spot)return;
+ var selection=m.callUp&&Array.isArray(m.callUp.numbers)?m.callUp.numbers:[];
+ if(!selection.length){spot.hidden=true;return}
+ var squad=D.squad||[],players=selection.map(function(number){return squad.find(function(p){return Number(p.number)===Number(number)})}).filter(Boolean);
+ if(!players.length){spot.hidden=true;return}
+ var goalkeeper=Number(m.callUp.goalkeeper),captain=players.find(function(p){return p.captain});
+ var heading='<div class="mc-callup-header"><div class="mc-callup-heading"><span class="mc-callup-eyebrow"><span class="mc-callup-live"></span> SELECCIÓN DEL EQUIPO · '+esc(m.round||"TEMPORADA 2026/27")+'</span><h2>LA <em>CONVOCATORIA</em></h2><p>Estos son los jugadores convocados por M+Qpizza SKY FC para este encuentro.</p></div><div class="mc-callup-summary"><strong>'+players.length.toString().padStart(2,"0")+'</strong><span>JUGADORES<br>CONVOCADOS</span></div></div>';
+ var meta='<div class="mc-callup-meta"><span>⚽ '+esc(players.length)+' futbolistas</span>'+(captain?'<span>★ Capitán: '+esc(captain.name)+'</span>':"")+(players.some(function(p){return Number(p.number)===goalkeeper})?'<span>◈ Portero: '+esc(players.find(function(p){return Number(p.number)===goalkeeper}).name)+'</span>':"")+'</div>';
+ var cards=players.map(function(p,i){var isCaptain=Boolean(p.captain),isKeeper=Number(p.number)===goalkeeper;return '<article class="mc-callup-player'+(isCaptain?' is-captain':'')+(isKeeper?' is-keeper':'')+'"><span class="mc-callup-watermark" aria-hidden="true">'+esc(p.number)+'</span><div class="mc-callup-player-top"><span class="mc-callup-number">'+esc(p.number)+'</span>'+(isCaptain?'<span class="mc-callup-special">★ CAPITÁN</span>':isKeeper?'<span class="mc-callup-special">◈ PORTERO</span>':'<span class="mc-callup-order">'+String(i+1).padStart(2,"0")+'</span>')+'</div><div class="mc-callup-player-info"><h3>'+esc(p.name)+'</h3><p>'+esc(p.fullName||"")+'</p></div></article>'}).join("");
+ spot.innerHTML=heading+meta+'<div class="mc-callup-grid">'+cards+'</div><div class="mc-callup-footer"><span>Lista de convocados · No implica alineación titular ni distribución de suplentes.</span><a href="/#plantilla">Ver plantilla completa ↗</a></div>';
+ spot.hidden=false;
+}
+
 function renderDetail(){
  var id=new URLSearchParams(location.search).get("partido"),m=games.find(function(g){return key(g)===id});
  if(!m){document.title="Partido no encontrado | SKY FC";$("#mc-detail").innerHTML='<section class="mc-intro"><div class="mc-eyebrow">MATCH CENTER</div><h1 class="mc-display">Partido no encontrado</h1><p class="mc-lede">La ficha solicitada no existe o ha cambiado de dirección.</p><div class="mc-actions"><a class="mc-btn primary" href="/partidos.html">Ver todos los partidos</a></div></section>';return}
@@ -37,6 +53,7 @@ function renderDetail(){
  var opp=sky(m.home)?m.homeScore:m.awayScore, against=sky(m.home)?m.awayScore:m.homeScore;
  var stats=isDone?[["Goles SKY",opp,"Marcador final"],["Goles rival",against,"Marcador final"],["Goleadores SKY",assisted.length,"Identificados"],["Tarjetas",Array.isArray(m.cards)?m.cards.length:"—",Array.isArray(m.cards)?"Registradas":"Sin registro"]]:[["Estado","Próximo","Pendiente de jugar"],["Fecha",m.date?fmt(m.date):"—","Calendario"],["Hora",m.time||"—",m.time?"Confirmada":"Por asignar"],["Sede",m.venue?"Asignada":"—",m.venue?"Ver abajo":"Por confirmar"]];
  $("#mc-stat-row").innerHTML=stats.map(function(s){return '<div class="mc-stat"><small>'+esc(s[0])+'</small><strong>'+esc(s[1])+'</strong><p>'+esc(s[2])+"</p></div>"}).join("");
+ renderCallUp(m);
  $("#mc-scorers").innerHTML=assisted.length?assisted.map(function(e){return '<div class="mc-player-row"><div class="mc-player-main"><span class="mc-shirt">'+esc(e.number==null?"★":e.number)+'</span><div><div class="mc-player-name">'+esc(e.player)+'</div><div class="mc-player-number">'+(e.number!=null?"Dorsal "+e.number:"Jugador del SKY FC")+'</div></div></div><span class="mc-goal-total">⚽ × '+e.goals+"</span></div>"}).join(""):'<div class="mc-notice">'+(isDone?"Los goleadores individuales de este encuentro están pendientes de confirmar.":"Los goleadores aparecerán aquí cuando se dispute el encuentro y se confirmen los datos.")+"</div>";
  $("#mc-events").innerHTML=events.length?(events.some(function(e){return !e.minute})?'<div class="mc-notice">Los minutos y el orden de las jugadas sin minuto están pendientes de confirmar.</div>':"")+events.map(function(e){return '<div class="mc-event"><span class="mc-minute">'+(e.minute?esc(e.minute)+'′':"—")+'</span><div class="mc-event-content"><strong>'+(e.type==="goal"?"⚽ Gol":e.type==="yellow"?"🟨 Tarjeta amarilla":e.type==="red"?"🟥 Tarjeta roja":"Incidencia")+'</strong><small>'+esc(e.player||e.description||"")+(e.assist?" · Asistencia: "+esc(e.assist):"")+'</small></div></div>'}).join(""):'<div class="mc-notice">'+(isDone?"No se han registrado incidencias individuales confirmadas.":"La cronología estará disponible después del partido.")+"</div>";
  var cards=Array.isArray(m.cards)?m.cards:null;
