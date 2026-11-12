@@ -1,6 +1,18 @@
 /* Catálogo oficial de noticias SKY FC */
 window.SKY_NEWS = [
   {
+    "date": "2026-11-12",
+    "title": "Hoy jugamos: M+Qpizza SKY FC vs Albacetium | Jornada 2",
+    "mediaType": "image",
+    "media": "/previa-sky-albacetium-3x1.svg",
+    "sponsorUrl": "https://muchomasquepizza.com",
+    "text": "Este jueves 12 de noviembre, a las 22:30, M+Qpizza SKY FC se enfrenta a Albacetium en el Campo José Copete (Copete 1), en la jornada 2 de la Liga Senior de Fútbol 7, Grupo A. El equipo buscará seguir creciendo en su segunda jornada oficial. ¡Hasta tocar el cielo!",
+    "slug": "hoy-jugamos-sky-albacetium-jornada-2",
+    "category": "Previas",
+    "cover": "/media/noticias/previa-sky-albacetium-jornada-2.svg",
+    "url": "/noticias/hoy-jugamos-sky-albacetium-jornada-2.html"
+  },
+  {
     "date": "2026-11-10",
     "title": "SKY FC se queda a un paso de la remontada frente al Wolfosburgo (6-7)",
     "mediaType": "image",
