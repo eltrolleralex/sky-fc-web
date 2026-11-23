@@ -86,9 +86,16 @@ window.SKY_DATA = {
       home: "Manchegan Warriors", away: "M+Qpizza SKY FC",
       homeScore: 7, awayScore: 5,
       venue: "Campo José Copete · Copete 1 · Albacete",
-      summary: "El SKY FC cayó 7-5 ante Manchegan Warriors. Asier abrió el marcador al minuto y medio. El equipo supo jugar unido y competir durante el encuentro. Los goles atribuidos inicialmente a Pablo se corrigieron a favor de Rubén Delegido; el desglose completo de goleadores está pendiente de verificación.",
-      events: [{type: "goal", minute: "1:30", team: "sky", player: "Asier González Sánchez", number: 10}], cards: null
-    },
+      summary: "Gran encuentro del SKY FC, que pese a caer 5-7 mostró una importante evolución en el juego colectivo. Asier abrió el marcador de falta directa al minuto y medio. Javi Calvo marcó aprovechando el rechace del portero a un disparo de Asier; Rubén Delegido anotó el tercero tras asistencia del capitán. Asier firmó su segundo tanto con un sombrero al guardameta y Rubén completó su doblete tras otra gran jugada y asistencia de Asier. Las constantes rotaciones ayudaron a mantener la intensidad. Asier participó directamente en los cinco goles.",
+      events: [
+        { type: "goal", minute: "1:30", team: "sky", player: "Asier González Sánchez", number: 10, detail: "Falta directa" },
+        { type: "goal", team: "sky", player: "Javier Sánchez Martínez", number: 5, detail: "Rechace tras disparo de Asier González" },
+        { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99, assist: "Asier González Sánchez" },
+        { type: "goal", team: "sky", player: "Asier González Sánchez", number: 10, detail: "Sombrero al portero" },
+        { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99, assist: "Asier González Sánchez" },
+        { type: "yellow", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
+      ], cards: null
+    }
     {
       date: "2026-11-12",
       round: "Liga · Grupo A · Jornada 2",
