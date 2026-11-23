@@ -93,9 +93,9 @@ window.SKY_DATA = {
         { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99, assist: "Asier González Sánchez" },
         { type: "goal", team: "sky", player: "Asier González Sánchez", number: 10, detail: "Sombrero al portero" },
         { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99, assist: "Asier González Sánchez" },
-        { type: "yellow", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
+        { type: "yellow", minute: "42", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
       ], cards: [
-        { type: "yellow", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
+        { type: "yellow", minute: "42", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
       ]
     },
     {
