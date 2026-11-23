@@ -18,39 +18,24 @@ window.SKY_DATA = {
 
   fixtures: [
     {
-      date: "2026-11-12",
-      round: "Liga · Grupo A · Jornada 2",
-      competition: "liga",
-      jornada: 2,
-      time: "22:30",
-      home: "M+Qpizza SKY FC",
-      away: "Albacetium",
-      venue: "Campo José Copete · Copete 1 · Albacete",
-      callUp: {
-        numbers: [6, 7, 8, 10, 14, 16, 17, 18, 19, 20, 93, 99],
-        goalkeeper: 93,
-        publishedOn: "2026-11-12"
-      }
-    },
-    {
-      date: "2026-11-16",
+      date: "2026-11-17",
       round: "Liga · Grupo A · Jornada 3",
       competition: "liga",
       jornada: 3,
       time: null,
-      home: "Manchegan Warrios",
-      away: "M+Qpizza SKY FC",
-      venue: null
+      home: "M+Qpizza SKY FC",
+      away: "Manchester United Warriors",
+      venue: "Albacete · campo pendiente de confirmar"
     },
     {
-      date: "2026-11-23",
+      date: "2026-11-25",
       round: "Liga · Grupo A · Jornada 4",
       competition: "liga",
       jornada: 4,
-      time: null,
+      time: "22:30",
       home: "M+Qpizza SKY FC",
-      away: "Muchismo del SUR",
-      venue: null
+      away: "Muchismo del Sur FC",
+      venue: "Campo José Copete · Albacete"
     },
     {
       date: "2026-11-30",
@@ -105,6 +90,21 @@ window.SKY_DATA = {
   ],
 
   results: [
+    {
+      date: "2026-11-12",
+      round: "Liga · Grupo A · Jornada 2",
+      competition: "liga", jornada: 2, time: "22:30",
+      home: "M+Qpizza SKY FC", away: "Albacetium FC",
+      homeScore: 3, awayScore: 5,
+      venue: "Campo José Copete · Copete 1 · Albacete",
+      summary: "El SKY FC comenzó mandando con un 2-0 gracias a Asier González y Rubén Delegido. Albacetium reaccionó y llegó al descanso con empate. En la segunda mitad, Asier volvió a marcar para igualar 3-3, pero el rival terminó imponiéndose 3-5. El equipo compitió y mostró momentos de buen juego pese al resultado.",
+      events: [
+        { type: "goal", team: "sky", player: "Asier González Sánchez", number: 10 },
+        { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99 },
+        { type: "goal", team: "sky", player: "Asier González Sánchez", number: 10 },
+        { type: "yellow", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
+      ], cards: null
+    },
     {
       date: "2026-11-09",
       round: "Amistoso · Preparación",
