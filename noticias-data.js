@@ -1,11 +1,33 @@
 /* Catálogo oficial de noticias SKY FC */
 window.SKY_NEWS = [
   {
+    "date": "2026-11-23",
+    "title": "Semana de partido: SKY FC prepara la jornada 4 frente a Muchismo del Sur",
+    "mediaType": "image",
+    "mediaRef": "crest",
+    "text": "M+Qpizza SKY FC afronta una nueva semana de competición. El miércoles 25 de noviembre, a las 22:30, se medirá a Muchismo del Sur FC en el Campo José Copete de Albacete, en la jornada 4 de la Liga Senior de Fútbol 7. La convocatoria se comunicará a los jugadores por los canales habituales. Tras el último encuentro, el equipo buscará seguir mejorando su juego colectivo.",
+    "slug": "semana-partido-muchismo-jornada-4-23-noviembre",
+    "category": "Previas",
+    "cover": "/escudo-oficial-skyfc.webp",
+    "url": "/partidos.html"
+  },
+  {
+    "date": "2026-11-23",
+    "title": "El SKY FC sigue pendiente de recibir sus equipaciones oficiales",
+    "mediaType": "image",
+    "mediaRef": "crest",
+    "text": "El club continúa pendiente de recibir las equipaciones encargadas a Central Sports, después de varias semanas de retraso y nuevas reclamaciones al proveedor. Mientras tanto, el equipo está utilizando camisetas provisionales para poder disputar sus encuentros con una equipación uniforme. El club sigue solicitando información sobre el envío y el material incluido en el pedido.",
+    "slug": "seguimiento-equipaciones-23-noviembre",
+    "category": "Club",
+    "cover": "/escudo-oficial-skyfc.webp",
+    "url": "/noticias.html"
+  },
+  {
     "date": "2026-11-18",
     "title": "Crónica J3 | Manchegan Warriors 7-5 SKY FC",
     "mediaType": "image",
     "mediaRef": "crest",
-    "text": "Gran encuentro del SKY FC, que pese al 5-7 ante Manchegan Warriors demostró una importante evolución en el juego colectivo. Asier abrió el marcador de falta directa en el minuto 1:30. Javi Calvo anotó tras el rechace del portero a un disparo de Asier. Rubén Delegido marcó el tercero tras una asistencia del capitán. Asier hizo su segundo gol con un sombrero al guardameta y Rubén completó su doblete tras otra asistencia de Asier. Las constantes rotaciones permitieron mantener la intensidad. Goleadores: Asier (2), Rubén Delegido (2), Javi Calvo (1). Amarilla: Javi Calvo. Asier participó directamente en los cinco tantos.",
+    "text": "Gran encuentro del SKY FC, que pese al 5-7 ante Manchegan Warriors demostró una importante evolución en el juego colectivo. Asier abrió el marcador de falta directa en el minuto 1:30. Javi Calvo anotó tras el rechace del portero a un disparo de Asier. Rubén Delegido marcó el tercero tras una asistencia del capitán. Asier hizo su segundo gol con un sombrero al guardameta y Rubén completó su doblete tras otra asistencia de Asier. Las constantes rotaciones permitieron mantener la intensidad. Goleadores: Asier (2), Rubén Delegido (2), Javi Calvo (1). Tarjeta amarilla: Javi Calvo (dorsal 5), minuto 42. Asier participó directamente en los cinco tantos.",
     "slug": "cronica-sky-manchester-united-warriors-jornada-3",
     "category": "Crónicas",
     "cover": "/escudo-oficial-skyfc.webp",
