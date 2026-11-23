@@ -18,16 +18,6 @@ window.SKY_DATA = {
 
   fixtures: [
     {
-      date: "2026-11-17",
-      round: "Liga · Grupo A · Jornada 3",
-      competition: "liga",
-      jornada: 3,
-      time: null,
-      home: "M+Qpizza SKY FC",
-      away: "Manchester United Warriors",
-      venue: "Albacete · campo pendiente de confirmar"
-    },
-    {
       date: "2026-11-25",
       round: "Liga · Grupo A · Jornada 4",
       competition: "liga",
@@ -90,6 +80,15 @@ window.SKY_DATA = {
   ],
 
   results: [
+    {
+      date: "2026-11-17", round: "Liga · Grupo A · Jornada 3",
+      competition: "liga", jornada: 3, time: "22:30",
+      home: "Manchegan Warriors", away: "M+Qpizza SKY FC",
+      homeScore: 7, awayScore: 5,
+      venue: "Campo José Copete · Copete 1 · Albacete",
+      summary: "El SKY FC cayó 7-5 ante Manchegan Warriors. Asier abrió el marcador al minuto y medio. El equipo supo jugar unido y competir durante el encuentro. Los goles atribuidos inicialmente a Pablo se corrigieron a favor de Rubén Delegido; el desglose completo de goleadores está pendiente de verificación.",
+      events: [{type: "goal", minute: "1:30", team: "sky", player: "Asier González Sánchez", number: 10}], cards: null
+    },
     {
       date: "2026-11-12",
       round: "Liga · Grupo A · Jornada 2",
