@@ -5,7 +5,7 @@ window.SKY_NEWS = [
     "title": "Crónica J3 | Manchegan Warriors 7-5 SKY FC",
     "mediaType": "image",
     "mediaRef": "crest",
-    "text": "El SKY FC cayó 7-5 ante Manchegan Warriors el 17 de noviembre en el José Copete 1. Asier abrió el marcador al minuto y medio y el equipo destacó por su juego colectivo. Los goles atribuidos inicialmente a Pablo se corrigieron a favor de Rubén Delegido.",
+    "text": "Gran encuentro del SKY FC, que pese al 5-7 ante Manchegan Warriors demostró una importante evolución en el juego colectivo. Asier abrió el marcador de falta directa en el minuto 1:30. Javi Calvo anotó tras el rechace del portero a un disparo de Asier. Rubén Delegido marcó el tercero tras una asistencia del capitán. Asier hizo su segundo gol con un sombrero al guardameta y Rubén completó su doblete tras otra asistencia de Asier. Las constantes rotaciones permitieron mantener la intensidad. Goleadores: Asier (2), Rubén Delegido (2), Javi Calvo (1). Amarilla: Javi Calvo. Asier participó directamente en los cinco tantos.",
     "slug": "cronica-sky-manchester-united-warriors-jornada-3",
     "category": "Crónicas",
     "cover": "/escudo-oficial-skyfc.webp",
