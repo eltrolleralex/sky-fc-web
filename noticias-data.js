@@ -1,6 +1,39 @@
 /* Catálogo oficial de noticias SKY FC */
 window.SKY_NEWS = [
   {
+    "date": "2026-11-18",
+    "title": "Crónica J3 | SKY FC frente a Manchester United Warriors",
+    "mediaType": "image",
+    "mediaRef": "crest",
+    "text": "El SKY FC afrontó el encuentro del 17 de noviembre ante Manchester United Warriors con una idea clara: jugar como equipo. Asier abrió el marcador cuando apenas había transcurrido un minuto y medio. En la revisión de los goleadores, los tantos atribuidos inicialmente a Pablo se corrigieron a favor de Rubén Delegido. Marcador final pendiente de confirmación.",
+    "slug": "cronica-sky-manchester-united-warriors-jornada-3",
+    "category": "Crónicas",
+    "cover": "/escudo-oficial-skyfc.webp",
+    "url": "/noticias/cronica-sky-manchester-united-warriors-jornada-3.html"
+  },
+  {
+    "date": "2026-11-13",
+    "title": "Crónica J2 | SKY FC 3-5 Albacetium FC",
+    "mediaType": "image",
+    "mediaRef": "crest",
+    "text": "El SKY FC se adelantó 2-0 con goles de Asier y Rubén Delegido. Albacetium igualó antes del descanso. Asier firmó el 3-3 en la segunda parte, pero el rival acabó llevándose el encuentro por 3-5.",
+    "slug": "cronica-sky-albacetium-jornada-2",
+    "category": "Crónicas",
+    "cover": "/escudo-oficial-skyfc.webp",
+    "url": "/noticias/cronica-sky-albacetium-jornada-2.html"
+  },
+  {
+    "date": "2026-11-18",
+    "title": "Jornada 4 | SKY FC recibe a Muchismo del Sur el miércoles 25",
+    "mediaType": "image",
+    "mediaRef": "crest",
+    "text": "El miércoles 25 de noviembre, a las 22:30, M+Qpizza SKY FC se enfrenta a Muchismo del Sur en el Campo José Copete. El equipo comunicará la convocatoria por sus canales habituales.",
+    "slug": "previa-sky-muchismo-del-sur-jornada-4",
+    "category": "Previas",
+    "cover": "/escudo-oficial-skyfc.webp",
+    "url": "/noticias/previa-sky-muchismo-del-sur-jornada-4.html"
+  },
+  {
     "date": "2026-11-12",
     "title": "Hoy jugamos: M+Qpizza SKY FC vs Albacetium | Jornada 2",
     "mediaType": "image",
