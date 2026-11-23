@@ -94,7 +94,9 @@ window.SKY_DATA = {
         { type: "goal", team: "sky", player: "Asier González Sánchez", number: 10, detail: "Sombrero al portero" },
         { type: "goal", team: "sky", player: "Rubén Delegido Muñoz", number: 99, assist: "Asier González Sánchez" },
         { type: "yellow", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
-      ], cards: null
+      ], cards: [
+        { type: "yellow", team: "sky", player: "Javier Sánchez Martínez", number: 5 }
+      ]
     },
     {
       date: "2026-11-12",
