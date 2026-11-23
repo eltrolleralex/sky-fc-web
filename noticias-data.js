@@ -12,17 +12,6 @@ window.SKY_NEWS = [
     "url": "/partidos.html"
   },
   {
-    "date": "2026-11-23",
-    "title": "El SKY FC sigue pendiente de recibir sus equipaciones oficiales",
-    "mediaType": "image",
-    "mediaRef": "crest",
-    "text": "El club continúa pendiente de recibir las equipaciones encargadas a Central Sports, después de varias semanas de retraso y nuevas reclamaciones al proveedor. Mientras tanto, el equipo está utilizando camisetas provisionales para poder disputar sus encuentros con una equipación uniforme. El club sigue solicitando información sobre el envío y el material incluido en el pedido.",
-    "slug": "seguimiento-equipaciones-23-noviembre",
-    "category": "Club",
-    "cover": "/escudo-oficial-skyfc.webp",
-    "url": "/noticias.html"
-  },
-  {
     "date": "2026-11-18",
     "title": "Crónica J3 | Manchegan Warriors 7-5 SKY FC",
     "mediaType": "image",
