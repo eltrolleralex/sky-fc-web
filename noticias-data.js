@@ -2,10 +2,10 @@
 window.SKY_NEWS = [
   {
     "date": "2026-11-18",
-    "title": "Crónica J3 | SKY FC frente a Manchester United Warriors",
+    "title": "Crónica J3 | Manchegan Warriors 7-5 SKY FC",
     "mediaType": "image",
     "mediaRef": "crest",
-    "text": "El SKY FC afrontó el encuentro del 17 de noviembre ante Manchester United Warriors con una idea clara: jugar como equipo. Asier abrió el marcador cuando apenas había transcurrido un minuto y medio. En la revisión de los goleadores, los tantos atribuidos inicialmente a Pablo se corrigieron a favor de Rubén Delegido. Marcador final pendiente de confirmación.",
+    "text": "El SKY FC cayó 7-5 ante Manchegan Warriors el 17 de noviembre en el José Copete 1. Asier abrió el marcador al minuto y medio y el equipo destacó por su juego colectivo. Los goles atribuidos inicialmente a Pablo se corrigieron a favor de Rubén Delegido.",
     "slug": "cronica-sky-manchester-united-warriors-jornada-3",
     "category": "Crónicas",
     "cover": "/escudo-oficial-skyfc.webp",
